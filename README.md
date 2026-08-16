@@ -11,39 +11,35 @@
 
 ## Overview
 
-Wykiati is a high-contrast, distraction-free theme engineered specifically for OLED displays and modern desktop and mobile workflows. It combines a true pitch-black (`#000000`) foundation with hardware-accelerated glassmorphism, refined typography, and full customization via the Obsidian Style Settings plugin.
-
-![Wykiati Theme Preview](screenshot.png)
+Wykiati is a high-contrast, glassmorphism theme engineered for OLED displays and modern desktop and mobile workflows. It combines a solid pitch-black (`#000000`) foundation with subtle starry ambient lighting, hardware-accelerated glass translucency, custom typography (Figtree and JetBrains Mono), and full customization via the Obsidian Style Settings plugin.
 
 ---
 
-## Architectural Principles
+## Architectural Highlights
 
-### 1. True OLED Black Canvas
-The entire editor, workspace background, and primary views use `#000000`. This eliminates pixel illumination on OLED screens, reduces power consumption on mobile devices, and prevents visual fatigue during extended writing sessions.
+### 1. Solid OLED Black (#000000) Foundation
+The editor canvas and workspace use a true `#000000` base, delivering zero pixel emission on OLED displays while maintaining subtle starry background illumination.
 
-### 2. Surface Elevation Hierarchy
-Depth is created through calibrated alpha channels, subtle hairline borders, and hardware-accelerated `backdrop-filter` blurs rather than muddy grey solid backgrounds:
-- **Surface 0 (`--theme-surface-0`)**: `#000000` (Editor canvas, base layout)
-- **Surface 1 (`--theme-surface-1`)**: `rgba(14, 14, 16, 0.72)` (Sidebars, ribbon, status bar)
-- **Surface 2 (`--theme-surface-2`)**: `rgba(22, 22, 26, 0.68)` (Modals, cards, floating palettes)
-- **Surface 3 (`--theme-surface-3`)**: `rgba(34, 34, 40, 0.60)` (Dropdown menus, elevated controls)
-- **Borders (`--theme-border`)**: `rgba(255, 255, 255, 0.08)` hairline definition
+### 2. Glassmorphism & Surface Depth
+Translucent surfaces, sidebars, modals, and navigation panels utilize hardware-accelerated `backdrop-filter: blur()` combined with fine borders and layered depth.
 
-### 3. Dynamic Accent System
-The entire UI color scheme is driven by the master CSS variable `--color-accent: var(--theme-accent, #30d158)`. Changing this token dynamically recalculates highlights, active states, focus indicators, and interactive surfaces across the whole application.
+### 3. Interactive RGB Color Customization
+Through Style Settings, users can customize the exact hex/RGB color of:
+- App Background Color
+- Primary Accent Color
+- Border and Guide Line Colors
+- Graph View Nodes and Link Lines
 
 ---
 
 ## Key Features
 
-- **Command Palette & Quick Switcher**: Suspended glass modal with 18px rounded corners, borderless search input, keycap badges, and distinctive active item indicator.
-- **Translucent Tabs**: Subtle pill tabs with elevation highlight on active state and integrated circular close button.
-- **Glassmorphism Callouts**: Tinted translucent containers with emissive lateral accent indicators and balanced contrast icons.
-- **Code Blocks**: Dedicated dark surface container (`#0c0c10`) with language flair badges, smooth copy button feedback, and 7 bundled syntax highlight themes.
-- **Metadata Properties**: Frontmatter cards styled with clean borders and tag pills.
-- **Custom Checkboxes & Task Glyphs**: Smooth toggle switches and native support for extended task status indicators (`- [!]`, `- [?]`, `- [*]`, `- [i]`, etc.).
-- **Mobile Optimized**: Single-row compact toolbar option, fluid sheet drawers, and comfortable touch targets across iOS and Android.
+- **Starry Background Illumination**: Subtle background noise with specular lighting filter.
+- **Glassmorphism Callouts**: Multiple visual styles with lateral accent indicators.
+- **Code Blocks**: Dedicated dark surface container with language flair badges and 9 bundled syntax themes.
+- **Extended Task Checkboxes**: Native support for custom task status glyphs (`- [!]`, `- [?]`, `- [*]`, `- [i]`, etc.).
+- **Typography**: Built-in Figtree and JetBrains Mono font support.
+- **Mobile Optimization**: Single-row compact toolbar layout and fluid touch interactions across iOS and Android.
 
 ---
 
@@ -57,7 +53,7 @@ The entire UI color scheme is driven by the master CSS variable `--color-accent:
 
 ### Method 2: Manual Installation
 1. Download `theme.css` and `manifest.json` from the latest [GitHub Release](https://github.com/Andr3wGustavo/wykiati-obsidian-theme/releases).
-2. Open your Obsidian Vault root directory and navigate to `.obsidian/themes/`.
+2. Open your Obsidian Vault directory and navigate to `.obsidian/themes/`.
 3. Create a folder named `Wykiati` and place `theme.css` and `manifest.json` inside.
 4. In Obsidian, go to **Settings** > **Appearance** > **Theme** and select **Wykiati**.
 
@@ -65,46 +61,36 @@ The entire UI color scheme is driven by the master CSS variable `--color-accent:
 
 ## Style Settings Configuration
 
-Wykiati provides comprehensive customization options through the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin:
+Wykiati integrates with the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to provide the following configuration controls:
 
-- **Color Scheme Presets**:
-  - Wykiati Emerald (Default)
-  - Cyber Cyan
-  - Neon Violet
-  - Solar Amber
-  - Crimson Rose
-  - Monochrome Minimal
-  - Gruvbox OLED
-  - Catppuccin Mocha OLED
-  - Dracula OLED
-  - One Dark OLED
-  - Lorens Space
-- **Custom Accent Color**: Full hex/RGB color picker override.
-- **Custom App Background**: Custom background override (default `#000000`).
-- **Focus Mode**: Automatically dims sidebars and toolbars while typing in the editor.
-- **Heading Styles**: Modern Clean, Glass Box, Lodi Underline, Neat Pill, Outline, Dots, Cross.
-- **Callout Styles**: Wykiati Modern Glass, Floating Title, Glow Accent, Minimal Outline.
-- **Code Block Syntax Themes**: Wykiati Neon, Tokyo Night, GitHub Dark, Catppuccin Mocha, Dracula, One Dark, Halcyon.
-- **Auto-Hide Toggles**: Independent hover-to-show options for Tab bar, Status bar, and Left ribbon.
-- **Mobile Toolbar**: Single-row compact layout toggle and vertical pixel offset slider.
+- **Colors & Palettes**:
+  - Color presets: Wykiati Glass (Default), Gruvbox, Catppuccin, Lorens, Dracula, One Dark.
+  - Interactive RGB color pickers for background, accent, borders, and graph view elements.
+- **Headers & Typography**:
+  - Heading styles: Modern Clean, Glass Box, Lodi, Cross, Voidraizer, Outline, Dots, Neat.
+  - Heading color schemas: Theme Accent, Multi-level Colors, Monochrome.
+- **Callouts & Code**:
+  - Callout styles: Obsidian default, Glass Robo, Lorens, Glow, and regional presets.
+  - Syntax Highlighting: Glass Robo, Dracula, One Dark, Catppuccin Frappe/Macchiato/Mocha, Halcyon, GitHub Dark, Tokyo Night.
+- **Interface & Auto-Hide**:
+  - Auto-hide options for Tab bar, Status bar, and Ribbon.
+  - Mobile single-row toolbar layout and vertical offset adjustment.
 
 ---
 
-## Platform Compatibility
+## Compatibility
 
-| Platform | Live Preview | Reading View | Canvas | Graph View | Mobile Support |
+| Platform | Live Preview | Reading View | Canvas | Graph View | Mobile |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Windows 10 / 11** | Supported | Supported | Supported | Supported | — |
+| **Windows** | Supported | Supported | Supported | Supported | — |
 | **macOS** | Supported | Supported | Supported | Supported | — |
 | **Linux** | Supported | Supported | Supported | Supported | — |
-| **iOS / iPadOS** | Supported | Supported | Supported | Supported | Supported |
+| **iOS** | Supported | Supported | Supported | Supported | Supported |
 | **Android** | Supported | Supported | Supported | Supported | Supported |
 
 ---
 
 ## Development
-
-To build the theme from source:
 
 ```bash
 # Clone repository
@@ -114,28 +100,26 @@ cd wykiati-obsidian-theme
 # Install dependencies
 npm install
 
-# Start development build with file watching
+# Watch mode for live development
 npm run dev
 
-# Compile production minified CSS bundle
+# Build production bundle
 npm run build
 ```
 
 ---
 
-## Support
-
-If you find Wykiati valuable for your daily note-taking and knowledge workflows, you can support ongoing maintenance and feature development:
+## Support & Donation
 
 [![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/wykiati)
 
 - Star the project on [GitHub](https://github.com/Andr3wGustavo/wykiati-obsidian-theme)
-- Report issues and feature requests on the [GitHub Issue Tracker](https://github.com/Andr3wGustavo/wykiati-obsidian-theme/issues)
+- Report issues and suggestions on [GitHub Issues](https://github.com/Andr3wGustavo/wykiati-obsidian-theme/issues)
 
 ---
 
 ## License & Credits
 
 - Licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
-- Base architectural foundations and SVG asset mappings derived from [Glass Robo](https://github.com/lorens-osman-dev/Glass-Robo) by **Lorens Osman** and **Daniel (@Avesend)**.
+- Base architectural foundation and assets derived from [Glass Robo](https://github.com/lorens-osman-dev/Glass-Robo) by **Lorens Osman** and **Daniel (@Avesend)**.
 - Bundled Fonts: [Figtree](https://github.com/erikdkennedy/figtree) (OFL) by Erik Kennedy, [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) (OFL) by JetBrains.
