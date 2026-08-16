@@ -1,0 +1,28 @@
+/* ==========================================================================
+   WYKIATI THEME — TOOLTIPS & NOTICES
+   ========================================================================== */
+
+.notice {
+  background-color: var(--theme-surface-3) !important;
+  backdrop-filter: var(--theme-glass-backdrop);
+  -webkit-backdrop-filter: var(--theme-glass-backdrop);
+  border: 1px solid var(--theme-border-hover);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-floating);
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px 16px;
+  animation: slide-in-bottom var(--anim-duration-moderate) var(--ease-spring);
+}
+
+.tooltip {
+  background-color: var(--theme-surface-3) !important;
+  backdrop-filter: var(--theme-glass-backdrop);
+  -webkit-backdrop-filter: var(--theme-glass-backdrop);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-md);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 4px 8px;
+}

@@ -1,0 +1,316 @@
+/* @settings
+
+name: Wykiati Theme Settings
+id: wykiati-theme-settings
+collapsed: false
+settings:
+
+# Color & Appearance
+-
+    id: appearance-settings
+    title: Appearance & Colors
+    type: heading
+    level: 1
+    collapsed: false
+-
+    id: themes-setting
+    title: Color Scheme Preset
+    description: Select a curated color scheme optimized for OLED displays
+    type: class-select
+    allowEmpty: false
+    default: wykiatiEmerald
+    options:
+    - 
+        label: Wykiati Emerald (Default)
+        value: wykiatiEmerald
+    - 
+        label: Cyber Cyan
+        value: wykiatiCyan
+    - 
+        label: Neon Violet
+        value: wykiatiViolet
+    - 
+        label: Solar Amber
+        value: wykiatiAmber
+    - 
+        label: Crimson Rose
+        value: wykiatiRose
+    - 
+        label: Monochrome Minimal
+        value: wykiatiMono
+    - 
+        label: Gruvbox OLED
+        value: gruvbox
+    - 
+        label: Catppuccin Mocha OLED
+        value: catppuccin
+    - 
+        label: Dracula OLED
+        value: dracula
+    - 
+        label: One Dark OLED
+        value: oneDark 
+    - 
+        label: Lorens Space
+        value: lorens
+-
+    id: theme-accent-color
+    title: Custom Accent Color
+    description: Override the primary accent color across the entire theme
+    type: variable-color
+    format: hex
+    default: '#30d158'
+    alt-format:
+      - 'rgb'
+-
+    id: glass-background-color-settings
+    title: App Background Color
+    type: variable-themed-color
+    description: Custom background color (Default is 100% OLED Pure Black #000000)
+    allowEmpty: true
+    format: hex
+    opacity: false
+    default-dark: '#000000'
+    default-light: '#f5f5f7'
+
+# Glass & Focus
+-
+    id: glass-focus-settings
+    title: Glassmorphism & Focus
+    type: heading
+    level: 1
+    collapsed: true
+-
+    id: wykiati-focus-mode
+    title: Focus Mode
+    description: Subtly dims sidebars and toolbars when writing in the editor
+    type: class-toggle
+-
+    id: disable_stars_settings
+    title: Background Texture
+    description: Disable subtle noise texture in background
+    type: class-toggle
+-
+    id: enable_bold_gradient_settings
+    title: Bold Text Accent Gradient
+    description: Adds an accent gradient to bold markdown text
+    type: class-toggle
+-
+    id: disable_title_gradient_settings
+    title: Disable Note Title Gradient
+    description: Makes note title solid white without gradient
+    type: class-toggle
+
+# Typography & Headers
+-
+    id: headers-settings
+    title: Headers & Typography
+    type: heading
+    level: 1
+    collapsed: true
+-
+    id: disable_fonts_settings
+    title: Built-in Custom Fonts
+    description: Disable bundled Figtree / JetBrains Mono fonts and use system fonts
+    type: class-toggle
+-
+    id: headers-settin
+    title: Header Styling
+    description: Select heading typography style
+    type: class-select
+    allowEmpty: false
+    default: no-style-headers
+    options:
+    - 
+        label: Modern Clean (Default)
+        value: no-style-headers
+    - 
+        label: Glass Box
+        value: glass-robo-style-headers
+    - 
+        label: Lodi Underline
+        value: lodi-style-headers
+    - 
+        label: Neat Pill
+        value: neat-style-headers
+    - 
+        label: Outline
+        value: outline-style-headers
+    - 
+        label: Dots Indicator
+        value: dots-style-headers
+    - 
+        label: Cross
+        value: cross-style-headers
+-
+    id: headers-color-settin
+    title: Header Colors
+    description: Select color schema for headers
+    type: class-select
+    allowEmpty: false
+    default: glass-robo-color-headers
+    options:
+    - 
+        label: Theme Accent (Default)
+        value: glass-robo-color-headers
+    - 
+        label: Multi-level Colors
+        value: lorens-color-headers
+    - 
+        label: Monochrome White
+        value: no-color-headers
+
+# Callouts & Code
+-
+    id: callouts-settings
+    title: Callouts & Code Blocks
+    type: heading
+    level: 1
+    collapsed: true
+-   
+    id: callouts-settin
+    title: Callout Styling
+    type: class-select
+    allowEmpty: false
+    default: obsidian-callouts
+    options:
+    -
+        label: Wykiati Modern Glass (Default)
+        value: obsidian-callouts
+    -
+        label: Floating Title (Glass Robo)
+        value: glass-robo-callouts
+    -
+        label: Glow Accent
+        value: glow-callouts
+-
+    id: callout_center_settings
+    title: Center Callout Titles
+    description: Centers the title header in callout blocks
+    type: class-toggle
+-
+    id: syntax-highlight-theme-dark
+    title: Code Block Syntax Highlighting
+    description: Select syntax highlighting theme for code blocks
+    type: class-select
+    allowEmpty: false
+    default: glassRoboCode
+    options:
+    - 
+        label: Wykiati Neon (Default)
+        value: glassRoboCode
+    - 
+        label: Tokyo Night
+        value: tokyo-night
+    - 
+        label: GitHub Dark
+        value: github-dark
+    - 
+        label: Catppuccin Mocha
+        value: catppuccin-mocha
+    - 
+        label: Dracula
+        value: dracula
+    - 
+        label: One Dark
+        value: one-dark-dark
+    - 
+        label: Halcyon
+        value: halcyon
+
+# Navigation & Interface
+-
+    id: autohide-settings
+    title: Navigation & Interface
+    type: heading
+    level: 1
+    collapsed: true
+- 
+    id: tab-autohide
+    title: Auto-hide Tab Bar
+    description: Fades tab bar until hovered
+    type: class-toggle
+- 
+    id: status-bar-autohide
+    title: Auto-hide Status Bar
+    description: Fades status bar until hovered
+    type: class-toggle
+- 
+    id: Ribbon-autohide
+    title: Auto-hide Left Ribbon Menu
+    description: Fades ribbon menu until hovered
+    type: class-toggle
+-
+    id: hide_navTreeArrow_settings
+    title: Minimal File Tree
+    description: Hides navigation arrows for a cleaner sidebar
+    type: class-toggle
+-
+    id: one_row_mobile_toolbar_settings
+    title: Mobile Single-Row Toolbar
+    description: Displays toolbar in a single compact row on mobile
+    type: class-toggle
+-
+    id: one_row_mobile_toolbar_bottom_offset
+    title: Mobile Toolbar Offset
+    description: Vertical offset for the single-row toolbar in pixels
+    type: variable-number
+    default: 70
+    format: px
+
+# Info & Support
+-
+    id: wykiati-support-settings
+    title: About Wykiati
+    type: heading
+    level: 1
+    collapsed: true
+-
+    id: wykiati-url-github
+    title: GitHub Repository
+    description: "[https://github.com/wykiati/wykiati-obsidian-theme](https://github.com/wykiati/wykiati-obsidian-theme)"
+    type: info-text
+    markdown: true
+
+*/
+
+body.disable_fonts_settings {
+    --font-interface-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-text-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-monospace-theme: "SF Mono", Monaco, "Cascadia Code", monospace;
+}
+
+body.disable_stars_settings {
+    --s-bg-svg: none;
+}
+
+body.hide_navTreeArrow_settings {
+    .tree-item-icon.collapse-icon {
+        display: none;
+    }
+
+    .tree-item.nav-folder:not(:has(.tree-item-self[data-path^="CLUSTERS"])) .tree-item-children.nav-folder-children {
+        border-color: transparent;
+        position: relative;
+
+        &::before {
+            content: " ";
+            display: block;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 18px;
+            border-left: 1px dashed var(--theme-border);
+        }
+    }
+}
+
+// Background color override
+body.theme-dark {
+    background-color: var(--glass-background-color-settings, #000000) !important;
+}
+
+body.theme-light {
+    background-color: var(--glass-background-color-settings, #f5f5f7) !important;
+}

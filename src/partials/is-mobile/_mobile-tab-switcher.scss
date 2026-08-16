@@ -1,0 +1,68 @@
+/* ==========================================================================
+   WYKIATI THEME — MOBILE TAB SWITCHER
+   ========================================================================== */
+
+@mixin mobile-styles {
+  .mobile-tab-switcher {
+    backdrop-filter: var(--theme-glass-backdrop);
+    -webkit-backdrop-filter: var(--theme-glass-backdrop);
+    background-color: rgba(0, 0, 0, 0.85) !important;
+
+    .mobile-tab-group-container {
+      .close-button {
+        width: 100%;
+        top: 0;
+        color: var(--color-red);
+        background-color: rgba(255, 69, 58, 0.2);
+        left: 0;
+        border-radius: 0;
+        border-top-left-radius: var(--radius-l);
+        border-top-right-radius: var(--radius-l);
+      }
+
+      /* Active tab highlight */
+      .mobile-tab.is-active .mobile-tab-preview-empty,
+      .mobile-tab.is-active .mobile-tab-preview-embed {
+        box-shadow: 0 0 0 2px var(--color-accent);
+        border-radius: var(--radius-m);
+      }
+
+      .mobile-tab-preview {
+        box-shadow: 0 0 0 1px var(--theme-border);
+        border-radius: var(--radius-m);
+      }
+    }
+
+    .mobile-tab-switcher-menubar {
+      .mobile-tab-switcher-menu-spacer {
+        height: 38px;
+
+        .clickable-icon {
+          background-color: var(--color-accent);
+          color: #000000;
+          border-radius: var(--radius-s);
+        }
+      }
+
+      .mobile-tab-switcher-menu-button {
+        background-color: var(--color-accent);
+        height: 38px;
+        padding: 0 10px;
+        border-radius: var(--radius-s);
+        color: #000000;
+        font-weight: 600;
+        width: 35vw;
+        justify-content: space-evenly;
+
+        .mobile-tab-switcher-menu-button-chevron {
+          color: #000000;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .mobile-navbar-tabs-action {
+    border-radius: var(--radius-s);
+  }
+}

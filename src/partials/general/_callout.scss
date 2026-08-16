@@ -1,0 +1,116 @@
+/* ==========================================================================
+   WYKIATI THEME — CALLOUTS (GLASSMORPHISM & ACCENTS)
+   ========================================================================== */
+
+/* ---------- Default Callout System ---------- */
+.callout {
+  padding: 12px 16px;
+  margin: 1.25em 0;
+  border-radius: var(--radius-m);
+  border: 1px solid rgba(var(--callout-color), 0.25);
+  border-inline-start: 4px solid rgba(var(--callout-color), 0.9);
+  background-color: rgba(var(--callout-color), 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: border-color var(--anim-duration-fast) var(--ease-apple),
+              box-shadow var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    border-color: rgba(var(--callout-color), 0.45);
+    box-shadow: 0 6px 20px rgba(var(--callout-color), 0.15);
+  }
+
+  .callout-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.95em;
+    color: rgb(var(--callout-color));
+  }
+
+  .callout-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--callout-color));
+    opacity: 0.9;
+  }
+
+  .callout-content {
+    color: var(--text-normal);
+    line-height: 1.6;
+
+    p {
+      margin: 0.25em 0;
+    }
+  }
+
+  .callout-fold {
+    color: var(--text-muted);
+    opacity: 0.7;
+    transition: opacity var(--anim-duration-fast) var(--ease-apple);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// Hide raw edit button
+.edit-block-button {
+  display: none !important;
+}
+
+/* ---------- Alternate Callout Styles for Style Settings ---------- */
+
+/* Floating Title Style */
+.glass-robo-callouts .callout {
+  position: relative;
+  margin-top: 18px !important;
+  overflow: visible;
+  border: 1px solid rgba(var(--callout-color), 0.5);
+  background: rgba(var(--callout-color), 0.09);
+
+  .callout-title {
+    position: absolute;
+    top: -12px;
+    left: 14px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: var(--radius-s);
+    color: #ffffff;
+    padding: 0 10px;
+    background: rgba(var(--callout-color), 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+
+    .callout-title-inner {
+      color: #000000;
+      font-weight: 700;
+    }
+  }
+
+  &:has(> .callout-title .callout-title-inner:dir(rtl)) > .callout-title {
+    left: unset;
+    right: 14px;
+  }
+}
+
+/* Center Callout Title Toggle */
+.callout_center_settings .callout .callout-title {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Glow Style */
+.glow-callouts .callout {
+  border: 1px solid rgba(var(--callout-color), 0.6);
+  box-shadow: 0 0 18px rgba(var(--callout-color), 0.25);
+  background: rgba(var(--callout-color), 0.06);
+}
+
+/* Minimalist Outline Style */
+.obsidian-callouts .callout {
+  border-inline-start-width: 4px;
+  background-color: var(--theme-surface-1);
+}

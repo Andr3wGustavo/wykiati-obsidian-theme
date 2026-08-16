@@ -1,0 +1,49 @@
+/* ==========================================================================
+   WYKIATI THEME — WINDOW CONTROLS (TRAFFIC LIGHTS)
+   ========================================================================== */
+
+.mod-windows,
+.mod-linux {
+  --frame-left-space: 0px;
+  --frame-right-space: 80px;
+}
+
+.titlebar-button-container.mod-right {
+  margin-right: 14px !important;
+
+  .titlebar-button {
+    padding: 0px !important;
+    min-height: 12px !important;
+    min-width: 12px !important;
+    align-self: center;
+    margin-left: 8px !important;
+    border-radius: 50%;
+    transition: all var(--anim-duration-fast) var(--ease-apple);
+
+    &:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    }
+
+    & > svg,
+    & > image {
+      visibility: collapse !important;
+    }
+
+    &.mod-minimize {
+      background-color: var(--color-green, #30d158) !important;
+      cursor: pointer;
+    }
+
+    &.mod-maximize,
+    &.mod-restore {
+      background-color: var(--color-yellow, #ffd60a) !important;
+      cursor: pointer;
+    }
+
+    &.mod-close {
+      background-color: var(--color-red, #ff453a) !important;
+      cursor: pointer;
+    }
+  }
+}

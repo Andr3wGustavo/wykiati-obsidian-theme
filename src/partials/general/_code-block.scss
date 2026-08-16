@@ -1,0 +1,154 @@
+/* ==========================================================================
+   WYKIATI THEME — CODE BLOCKS & SYNTAX HIGHLIGHTING
+   ========================================================================== */
+
+/* ---------- Inline Code ---------- */
+.markdown-rendered :not(pre) > code,
+.cm-s-obsidian span.cm-inline-code {
+  color: var(--color-cyan, #64d2ff) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xs);
+  padding: 2px 6px;
+  font-family: var(--font-monospace-theme) !important;
+  font-size: 0.88em;
+}
+
+/* ---------- Code Block Containers ---------- */
+.markdown-rendered pre,
+.cm-s-obsidian .HyperMD-codeblock {
+  font-family: var(--font-monospace-theme);
+}
+
+.markdown-rendered pre {
+  background-color: rgba(14, 14, 18, 0.92) !important;
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-m);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+/* Code Block Language Flair */
+.markdown-source-view.mod-cm6 .code-block-flair {
+  top: 6px;
+  right: 8px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--theme-border-hover);
+  }
+}
+
+/* Copy Code Button */
+.markdown-rendered button.copy-code-button {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--text-muted) !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--radius-xs) !important;
+  padding: 4px 8px;
+  font-size: 11px;
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    background-color: var(--color-accent) !important;
+    color: #000000 !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 10px rgba(var(--color-accent-rgb), 0.4);
+  }
+}
+
+.is-phone .markdown-rendered button.copy-code-button {
+  margin: 0;
+}
+
+/* ---------- Syntax Highlighting Palettes ---------- */
+body.theme-dark {
+  /* Default Wykiati Neon */
+  --color-code-bg: #0c0c10;
+  --color-code-text: #f0f0f5;
+  --color-code-comment: #6c7280;
+  --color-code-keyword: #ff79c6;
+  --color-code-function: #50fa7b;
+  --color-code-string: #f1fa8c;
+  --color-code-number: #bd93f9;
+  --color-code-variable: #8be9fd;
+  --color-code-operator: #ff79c6;
+
+  /* Dracula */
+  --color-dracula-background: #12151c;
+  --color-dracula-foreground: #f8f8f2;
+  --color-dracula-comment: #6272a4;
+  --color-dracula-cyan: #8be9fd;
+  --color-dracula-green: #50fa7b;
+  --color-dracula-orange: #ffb86c;
+  --color-dracula-pink: #ff79c6;
+  --color-dracula-purple: #bd93f9;
+  --color-dracula-red: #ff5555;
+  --color-dracula-yellow: #f1fa8c;
+
+  /* One Dark */
+  --color-dark-one-dark-background: #16191f;
+  --color-dark-one-dark-gray-1: #5c6370;
+  --color-dark-one-dark-gray-2: #abb2bf;
+  --color-dark-one-dark-red: #e06c75;
+  --color-dark-one-dark-orange: #d19a66;
+  --color-dark-one-dark-green: #98c379;
+  --color-dark-one-dark-aqua: #56b6c2;
+  --color-dark-one-dark-purple: #c678dd;
+  --color-dark-one-dark-blue: #61afef;
+  --color-dark-one-dark-yellow: #e5c07b;
+
+  /* Catppuccin Mocha */
+  --color-ctp-mocha-background: #11111b;
+  --color-ctp-mocha-foreground: #cdd6f4;
+  --color-ctp-mocha-faint: #7f849c;
+  --color-ctp-mocha-muted: #9399b2;
+  --color-ctp-mocha-yellow: #f9e2af;
+  --color-ctp-mocha-orange: #fab387;
+  --color-ctp-mocha-pink: #f5c2e7;
+  --color-ctp-mocha-cyan: #94e2d5;
+  --color-ctp-mocha-green: #a6e3a1;
+  --color-ctp-mocha-red: #f38ba8;
+  --color-ctp-mocha-purple: #cba6f7;
+
+  /* Halcyon */
+  --color-halcyon-background: #10141d;
+  --color-halcyon-cyan: #5ccfe6;
+  --color-halcyon-yellow: #ffd580;
+  --color-halcyon-red: #ef6b73;
+  --color-halcyon-purple: #c3a6ff;
+
+  /* GitHub Dark */
+  --color-gh-dark-background: #0d1117;
+  --color-gh-dark-foreground: #c9d1d9;
+  --color-gh-dark-comment: #8b949e;
+  --color-gh-dark-blue: #58a6ff;
+  --color-gh-dark-green: #7ee787;
+  --color-gh-dark-orange: #ffa657;
+  --color-gh-dark-purple: #d2a8ff;
+  --color-gh-dark-red: #ff7b72;
+
+  /* Tokyo Night */
+  --color-tokyo-night-background: #13141f;
+  --color-tokyo-night-blue: #7aa2f7;
+  --color-tokyo-night-cyan: #7dcfff;
+  --color-tokyo-night-purple: #bb9af7;
+  --color-tokyo-night-orange: #ff9e64;
+  --color-tokyo-night-red: #f7768e;
+  --color-tokyo-night-yellow: #e0af68;
+  --color-tokyo-night-green: #9ece6a;
+  --color-tokyo-night-comment: #565f89;
+}

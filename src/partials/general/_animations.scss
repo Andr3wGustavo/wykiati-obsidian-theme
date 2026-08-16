@@ -1,0 +1,77 @@
+/* ==========================================================================
+   WYKIATI THEME — ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* Hover transitions */
+@media (hover: hover) {
+  body:not(.is-grabbing) .tree-item-self.is-clickable {
+    transition: background-color var(--anim-duration-fast) var(--ease-apple),
+                color var(--anim-duration-fast) var(--ease-apple);
+  }
+
+  .horizontal-tab-nav-item,
+  .vertical-tab-nav-item {
+    transition: background-color var(--anim-duration-fast) var(--ease-apple),
+                color var(--anim-duration-fast) var(--ease-apple);
+  }
+}
+
+.menu-item,
+.status-bar-item.mod-clickable,
+.workspace-tab-header-inner,
+.clickable-icon {
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+}
+
+/* Modal Animations */
+.modal {
+  animation: scale-up-center var(--anim-duration-fast) var(--ease-apple) both;
+}
+
+.popover,
+.snw-ref-title-popover {
+  animation: pop var(--anim-duration-fast) var(--ease-spring);
+}
+
+.prompt {
+  animation: slide-in-bottom var(--anim-duration-moderate) var(--ease-apple) both;
+}
+
+/* Keyframes */
+@keyframes slide-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

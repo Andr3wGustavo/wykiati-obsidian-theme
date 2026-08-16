@@ -1,0 +1,135 @@
+/* ==========================================================================
+   WYKIATI THEME — PROPERTIES / METADATA CONTAINER
+   ========================================================================== */
+
+.metadata-container {
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-m);
+  padding: 8px 12px;
+  background-color: var(--theme-surface-1);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5em;
+  transition: border-color var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    border-color: var(--theme-border-hover);
+  }
+}
+
+.collapse-indicator svg.svg-icon {
+  color: var(--color-accent) !important;
+}
+
+.metadata-properties-heading {
+  display: inline-flex;
+  width: 100%;
+  padding: var(--size-4-2);
+  margin-bottom: unset;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.metadata-properties-heading .collapse-indicator {
+  position: relative;
+  left: unset;
+  order: 2;
+  opacity: 1;
+}
+
+.metadata-properties-heading .collapse-indicator .collapse-icon svg.svg-icon {
+  width: 18px;
+}
+
+.metadata-properties-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: unset;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.metadata-properties-title::before {
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  margin-right: var(--size-4-2);
+  content: "";
+  background-color: var(--color-accent);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-archive'%3E%3Crect width='20' height='5' x='2' y='4' rx='2'/%3E%3Cpath d='M4 9v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9'/%3E%3Cpath d='M10 13h4'/%3E%3C/svg%3E");
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 18px;
+}
+
+.cm-editor .metadata-content,
+.markdown-preview-view .metadata-content {
+  padding: var(--size-4-3) var(--size-4-2);
+  border: none;
+  box-shadow: none;
+}
+
+.metadata-property-key {
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.metadata-property-icon {
+  height: fit-content;
+  padding: var(--size-2-1);
+  margin-left: var(--size-4-1);
+  color: var(--text-muted);
+}
+
+.metadata-property-icon:hover {
+  background-color: var(--theme-surface-active);
+  color: #ffffff;
+  border-radius: var(--radius-s);
+}
+
+.metadata-property-icon::before {
+  display: none;
+}
+
+.metadata-container .metadata-add-button {
+  margin-top: var(--size-4-2);
+  margin-left: var(--size-4-1);
+  border: 1px dashed var(--theme-border);
+  border-radius: var(--radius-s);
+  color: var(--text-muted);
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: rgba(var(--color-accent-rgb), 0.08);
+  }
+}
+
+.multi-select-container {
+  gap: var(--size-4-2);
+}
+
+.metadata-property:not([data-property-key=tags]) .multi-select-pill {
+  line-height: unset;
+  background-color: var(--theme-surface-active);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-s);
+}
+
+.metadata-property[data-property-key=tags] {
+  --pill-radius: var(--radius-full);
+}
+
+.workspace-leaf-content[data-type=all-properties] .view-content,
+.workspace-leaf-content[data-type=file-properties] .view-content,
+.workspace-leaf-content[data-type=properties] .view-content {
+  padding: var(--size-4-1);
+}
+
+.metadata-property:focus-within {
+  box-shadow: 0 0 0 1px var(--color-accent);
+  border-radius: var(--radius-s);
+}

@@ -1,0 +1,54 @@
+/* ==========================================================================
+   WYKIATI THEME — SETTINGS MODAL (PC)
+   ========================================================================== */
+
+@mixin pc-styles {
+  .modal.mod-settings.mod-sidebar-layout {
+    background-color: var(--theme-surface-2) !important;
+    backdrop-filter: var(--theme-glass-backdrop);
+    -webkit-backdrop-filter: var(--theme-glass-backdrop);
+    border: 1px solid var(--theme-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-floating);
+
+    .vertical-tab-header {
+      background-color: var(--theme-surface-1);
+      border-right: 1px solid var(--theme-border);
+      padding: 16px 12px;
+
+      .vertical-tab-nav-item {
+        border-radius: var(--radius-s);
+        margin: 2px 0;
+        padding: 6px 10px;
+        color: var(--text-normal);
+        transition: all var(--anim-duration-fast) var(--ease-apple);
+
+        &:hover {
+          background-color: var(--theme-surface-hover);
+          color: #ffffff;
+        }
+
+        &.is-active {
+          background-color: rgba(var(--color-accent-rgb), 0.16) !important;
+          color: #ffffff !important;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .vertical-tab-content-container {
+      padding: 24px 32px;
+    }
+  }
+}
+
+body:not(.native-scrollbars) .modal-close-button {
+  z-index: 10;
+  border-radius: 50%;
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    background-color: var(--color-red);
+    color: #ffffff;
+  }
+}

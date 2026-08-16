@@ -1,0 +1,58 @@
+@use './headers-functions' as *;
+
+body {
+  --h1-color: var(--level-1);
+  --h2-color: var(--level-2);
+  --h3-color: var(--level-3);
+  --h4-color: var(--level-4);
+  --h5-color: var(--level-5);
+  --h6-color: var(--level-6);
+
+  --h1-new-color: 191, 96, 107;
+  --h2-new-color: 207, 134, 110;
+  --h3-new-color: 235, 203, 140;
+  --h4-new-color: 153, 190, 141;
+  --h5-new-color: 165, 127, 150;
+  --h6-new-color: 155, 180, 196;
+
+}
+
+@include all-headers-con((font-weight:bold));
+
+@include h-con(1, null,
+  (background-color: var(--h1-color)),
+  (background-color: var(--h1-color)));
+@include h-con(2, null,
+  (background-color: var(--h2-color)),
+  (background-color: var(--h2-color)));
+@include h-con(3, null,
+  (background-color: var(--h3-color)),
+  (background-color: var(--h3-color)));
+@include h-con(4, null,
+  (background-color: var(--h4-color)),
+  (background-color: var(--h4-color)));
+@include h-con(5, null,
+  (background-color: var(--h5-color)),
+  (background-color: var(--h5-color)));
+@include h-con(6, null,
+  (background-color: var(--h6-color)),
+  (background-color: var(--h6-color)));
+
+@include h(1, null,
+  (background-color: var(--h1-color)),
+  (background-color: var(--h1-color)));
+@include h(2, null,
+  (background-color: var(--h2-color)),
+  (background-color: var(--h2-color)));
+@include h(3, null,
+  (background-color: var(--h3-color)),
+  (background-color: var(--h3-color)));
+@include h(4, null,
+  (background-color: var(--h4-color)),
+  (background-color: var(--h4-color)));
+@include h(5, null,
+  (background-color: var(--h5-color)),
+  (background-color: var(--h5-color)));
+@include h(6, null,
+  (background-color: var(--h6-color)),
+  (background-color: var(--h6-color)));

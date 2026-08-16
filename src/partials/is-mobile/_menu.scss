@@ -1,0 +1,16 @@
+@mixin mobile-styles {
+
+  //overlay behind menu
+  .suggestion-bg {
+    backdrop-filter: blur(5px);
+    opacity: 1 !important;
+  }
+
+  .menu {
+    background-color: var(--glass-background-color-settings, var(--s-bg-primary-color));
+
+    .menu-grabber {
+      background-color: var(--s-green-primary-color);
+    }
+  }
+}

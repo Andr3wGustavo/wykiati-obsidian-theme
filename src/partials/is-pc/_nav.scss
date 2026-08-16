@@ -1,0 +1,54 @@
+/* ==========================================================================
+   WYKIATI THEME — PC TABS & NAVIGATION
+   ========================================================================== */
+
+@mixin pc-styles {
+  /* Tab Bar Container */
+  .workspace-tab-header-container {
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--theme-border);
+    padding: 4px 6px 0 6px;
+  }
+
+  /* Individual Tabs */
+  .workspace-tab-header {
+    border-radius: var(--radius-s) var(--radius-s) 0 0;
+    margin: 0 2px;
+    transition: all var(--anim-duration-fast) var(--ease-apple);
+
+    &:hover:not(.is-active) {
+      background-color: var(--theme-surface-hover);
+    }
+  }
+
+  /* Active Tab */
+  .workspace-split.mod-vertical.mod-root .workspace-tab-header.is-active.mod-active > .workspace-tab-header-inner {
+    border-radius: var(--radius-s);
+    padding: 0 10px;
+    background-color: var(--theme-surface-active) !important;
+    border: 1px solid var(--theme-border-active);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all var(--anim-duration-fast) var(--ease-apple);
+
+    .workspace-tab-header-inner-title {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .workspace-tab-header-inner-close-button {
+      border-radius: 50%;
+      padding: 2px;
+      transition: background-color var(--anim-duration-fast) var(--ease-apple);
+
+      &:hover {
+        background-color: rgba(255, 69, 58, 0.3);
+        color: #ffffff;
+      }
+    }
+  }
+
+  /* Inactive Tab Title */
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title {
+    color: var(--text-muted);
+  }
+}

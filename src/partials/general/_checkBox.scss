@@ -1,0 +1,72 @@
+/* ==========================================================================
+   WYKIATI THEME — TOGGLES & CHECKBOXES
+   ========================================================================== */
+
+/* Settings Switch / Toggle (.checkbox-container) */
+.checkbox-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--theme-border);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-full);
+  transition: background-color var(--anim-duration-fast) var(--ease-apple),
+              border-color var(--anim-duration-fast) var(--ease-apple),
+              box-shadow var(--anim-duration-fast) var(--ease-apple);
+
+  &.is-enabled {
+    background-color: var(--color-accent);
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(var(--color-accent-rgb), 0.45);
+
+    &::after {
+      --toggle-thumb-color: #000000;
+      background-color: #000000 !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &::after {
+    --toggle-thumb-color: #ffffff;
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform var(--anim-duration-fast) var(--ease-apple);
+  }
+}
+
+/* Markdown Task Checkbox Styling */
+.task-list-item-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.04);
+  margin-right: 6px;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 6px rgba(var(--color-accent-rgb), 0.3);
+  }
+
+  &:checked {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 8px rgba(var(--color-accent-rgb), 0.4);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 4px;
+      height: 8px;
+      border: solid #000000;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

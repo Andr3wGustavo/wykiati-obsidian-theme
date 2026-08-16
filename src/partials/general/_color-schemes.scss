@@ -1,0 +1,174 @@
+/* ==========================================================================
+   WYKIATI THEME — COLOR SCHEMES & PALETTES
+   ========================================================================== */
+
+body {
+  // Callout color mappings using modern semantic tokens
+  --callout-default: var(--color-blue-rgb, 10, 132, 255);
+  --callout-info: var(--color-blue-rgb, 10, 132, 255);
+  --callout-todo: var(--color-cyan-rgb, 100, 210, 255);
+  --callout-tip: var(--color-cyan-rgb, 100, 210, 255);
+  --callout-important: var(--color-purple-rgb, 191, 90, 242);
+  --callout-summary: var(--color-blue-rgb, 10, 132, 255);
+  --callout-bug: var(--color-red-rgb, 255, 69, 58);
+  --callout-error: var(--color-red-rgb, 255, 69, 58);
+  --callout-fail: var(--color-red-rgb, 255, 69, 58);
+  --callout-quote: 142, 142, 147;
+  --callout-success: var(--color-green-rgb, 48, 209, 88);
+  --callout-question: var(--color-orange-rgb, 255, 159, 10);
+  --callout-warning: var(--color-orange-rgb, 255, 159, 10);
+  --callout-example: var(--color-purple-rgb, 191, 90, 242);
+}
+
+/* Default / Wykiati Emerald */
+body.glassRobo,
+body.wykiatiEmerald {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #30d158;
+  --color-accent: #30d158;
+  --color-accent-rgb: 48, 209, 88;
+  --text-normal: #ededed;
+  --s-hover-bg-color-green: rgba(48, 209, 88, 0.16);
+}
+
+/* Neon Cyan / Cyberpunk */
+body.wykiatiCyan {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #64d2ff;
+  --color-accent: #64d2ff;
+  --color-accent-rgb: 100, 210, 255;
+  --text-normal: #f0f8ff;
+  --s-hover-bg-color-green: rgba(100, 210, 255, 0.16);
+}
+
+/* Neon Violet / Amethyst */
+body.wykiatiViolet {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #bf5af2;
+  --color-accent: #bf5af2;
+  --color-accent-rgb: 191, 90, 242;
+  --text-normal: #fdf8ff;
+  --s-hover-bg-color-green: rgba(191, 90, 242, 0.16);
+}
+
+/* Solar Amber / Gold */
+body.wykiatiAmber {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #ffd60a;
+  --color-accent: #ffd60a;
+  --color-accent-rgb: 255, 214, 10;
+  --text-normal: #fffdf5;
+  --s-hover-bg-color-green: rgba(255, 214, 10, 0.16);
+}
+
+/* Crimson Rose */
+body.wykiatiRose {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #ff375f;
+  --color-accent: #ff375f;
+  --color-accent-rgb: 255, 55, 95;
+  --text-normal: #fff5f7;
+  --s-hover-bg-color-green: rgba(255, 55, 95, 0.16);
+}
+
+/* Monochrome Minimal */
+body.wykiatiMono {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #ffffff;
+  --color-accent: #ffffff;
+  --color-accent-rgb: 255, 255, 255;
+  --text-normal: #ffffff;
+  --text-muted: #a0a0a5;
+  --s-hover-bg-color-green: rgba(255, 255, 255, 0.14);
+}
+
+/* Gruvbox OLED */
+body.gruvbox {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #fabd2f;
+  --color-accent: #fabd2f;
+  --color-accent-rgb: 250, 189, 47;
+  --text-normal: #ebdbb2;
+  --s-hover-bg-color-green: rgba(250, 189, 47, 0.15);
+  --color-red-rgb: 204, 36, 29;
+  --color-green-rgb: 152, 151, 26;
+  --color-orange-rgb: 215, 153, 33;
+  --color-blue-rgb: 69, 133, 136;
+  --color-purple-rgb: 177, 98, 134;
+  --color-cyan-rgb: 104, 157, 106;
+}
+
+/* Catppuccin Mocha OLED */
+body.catppuccin {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #89b4fa;
+  --color-accent: #89b4fa;
+  --color-accent-rgb: 137, 180, 250;
+  --text-normal: #cdd6f4;
+  --s-hover-bg-color-green: rgba(137, 180, 250, 0.15);
+  --color-red-rgb: 243, 139, 168;
+  --color-orange-rgb: 250, 179, 135;
+  --color-green-rgb: 166, 227, 161;
+  --color-blue-rgb: 137, 180, 250;
+  --color-purple-rgb: 203, 166, 247;
+  --color-cyan-rgb: 148, 226, 213;
+}
+
+/* Dracula OLED */
+body.dracula {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #bd93f9;
+  --color-accent: #bd93f9;
+  --color-accent-rgb: 189, 147, 249;
+  --text-normal: #f8f8f2;
+  --s-hover-bg-color-green: rgba(189, 147, 249, 0.18);
+  --color-red-rgb: 255, 85, 85;
+  --color-orange-rgb: 255, 184, 108;
+  --color-green-rgb: 80, 250, 123;
+  --color-blue-rgb: 98, 114, 164;
+  --color-purple-rgb: 189, 147, 249;
+  --color-cyan-rgb: 139, 233, 253;
+}
+
+/* One Dark OLED */
+body.oneDark {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #61afef;
+  --color-accent: #61afef;
+  --color-accent-rgb: 97, 175, 239;
+  --text-normal: #abb2bf;
+  --s-hover-bg-color-green: rgba(97, 175, 239, 0.16);
+  --color-red-rgb: 224, 108, 117;
+  --color-orange-rgb: 209, 154, 102;
+  --color-green-rgb: 152, 195, 121;
+  --color-blue-rgb: 97, 175, 239;
+  --color-purple-rgb: 198, 120, 221;
+  --color-cyan-rgb: 86, 182, 194;
+}
+
+/* Lorens / Deep Space OLED */
+body.lorens {
+  --theme-bg: #000000;
+  --s-bg-primary-color: #000000;
+  --theme-accent: #a1f98f;
+  --color-accent: #a1f98f;
+  --color-accent-rgb: 161, 249, 143;
+  --text-normal: #f8f8f2;
+  --s-hover-bg-color-green: rgba(161, 249, 143, 0.18);
+  --color-orange-rgb: 253, 252, 179;
+  --color-blue-rgb: 118, 133, 245;
+  --color-red-rgb: 254, 97, 62;
+  --color-green-rgb: 129, 225, 164;
+  --color-purple-rgb: 122, 91, 166;
+  --color-cyan-rgb: 202, 252, 191;
+}

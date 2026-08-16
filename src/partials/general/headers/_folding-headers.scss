@@ -1,0 +1,157 @@
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator,
+.markdown-preview-view .heading-collapse-indicator {
+  cursor: pointer;
+}
+
+
+
+// make the folding indicator visible on mobile
+.is-mobile h1,
+.is-mobile h2,
+.is-mobile h3,
+.is-mobile h4,
+.is-mobile h5,
+.is-mobile h6,
+.is-mobile .HyperMD-header-1 .cm-fold-indicator,
+.is-mobile .HyperMD-header-2 .cm-fold-indicator,
+.is-mobile .HyperMD-header-3 .cm-fold-indicator,
+.is-mobile .HyperMD-header-4 .cm-fold-indicator,
+.is-mobile .HyperMD-header-5 .cm-fold-indicator,
+.is-mobile .HyperMD-header-6 .cm-fold-indicator {
+  .collapse-indicator {
+    opacity: 1;
+  }
+}
+
+// indicator line : when is-collapsed add a line to the end of header indicating is collapsed
+@mixin after-properties($color, $width , $height) {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: $width;
+  height: $height;
+  background-color: $color; // Use the parameter here
+}
+
+// hide default collapsing indicator
+@mixin cm-foldPlaceholder-properties {
+  color: transparent;
+  position: relative;
+  width: 50px;
+  display: inline-block;
+}
+
+// change the color of the folding indicator line based on the header level
+h1,
+.is-live-preview .HyperMD-header-1 {
+  .collapse-indicator svg.svg-icon {
+    color: var(--h1-color) !important;
+  }
+
+  .cm-foldPlaceholder {
+    @include cm-foldPlaceholder-properties;
+
+    &::after {
+      @include after-properties(var(--h1-color), 60px, 6px);
+    }
+  }
+}
+
+h2,
+.is-live-preview .HyperMD-header-2 {
+
+  .collapse-indicator svg.svg-icon {
+    color: var(--h2-color) !important;
+    width: 9px;
+    height: 9px;
+  }
+
+  .cm-foldPlaceholder {
+    @include cm-foldPlaceholder-properties;
+
+    &::after {
+      @include after-properties(var(--h2-color), 60px, 5px);
+    }
+  }
+
+}
+
+h3,
+.is-live-preview .HyperMD-header-3 {
+
+  .collapse-indicator svg.svg-icon {
+    color: var(--h3-color) !important;
+    width: 8px;
+    height: 8px;
+  }
+
+  .cm-foldPlaceholder {
+    @include cm-foldPlaceholder-properties;
+
+    &::after {
+      @include after-properties(var(--h3-color), 60px, 4px);
+    }
+  }
+
+}
+
+h4,
+.is-live-preview .HyperMD-header-4 {
+
+  .collapse-indicator svg.svg-icon {
+    color: var(--h4-color) !important;
+    width: 8px;
+    height: 8px;
+  }
+
+  .cm-foldPlaceholder {
+    @include cm-foldPlaceholder-properties;
+
+    &::after {
+      @include after-properties(var(--h4-color), 60px, 3px);
+    }
+  }
+
+}
+
+h5,
+.is-live-preview .HyperMD-header-5 {
+
+  .collapse-indicator svg.svg-icon {
+    color: var(--h5-color) !important;
+    width: 7px;
+    height: 7px;
+  }
+
+  .cm-foldPlaceholder {
+    @include cm-foldPlaceholder-properties;
+
+    &::after {
+      @include after-properties(var(--h5-color), 60px, 2px);
+    }
+  }
+
+}
+
+h6,
+.is-live-preview .HyperMD-header-6 {
+
+  .collapse-indicator svg.svg-icon {
+    color: var(--h6-color) !important;
+    width: 6px;
+    height: 6px;
+  }
+
+  .cm-foldPlaceholder {
+    @include cm-foldPlaceholder-properties;
+
+    &::after {
+      @include after-properties(var(--h6-color), 60px, 1px);
+    }
+  }
+
+}

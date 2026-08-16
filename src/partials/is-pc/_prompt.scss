@@ -1,0 +1,85 @@
+/* ==========================================================================
+   WYKIATI THEME — COMMAND PALETTE & QUICK SWITCHER (PC)
+   ========================================================================== */
+
+@mixin pc-styles {
+  .prompt {
+    background-color: var(--theme-surface-2) !important;
+    backdrop-filter: var(--theme-glass-backdrop);
+    -webkit-backdrop-filter: var(--theme-glass-backdrop);
+    border: 1px solid var(--theme-border-hover);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-floating);
+    padding: 12px;
+
+    /* Search input container */
+    .prompt-input-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--theme-border);
+      border-radius: var(--radius-m);
+      padding: 4px 12px;
+      margin-bottom: 8px;
+      transition: all var(--anim-duration-fast) var(--ease-apple);
+
+      &:focus-within {
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 2px rgba(var(--color-accent-rgb), 0.3);
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    .prompt-input {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      color: #ffffff;
+      font-size: 15px;
+      padding: 8px 0;
+    }
+
+    /* Results list */
+    .prompt-results {
+      padding: 4px 0;
+
+      .suggestion-item {
+        border-radius: var(--radius-m);
+        padding: 8px 12px;
+        margin: 3px 0;
+        transition: all var(--anim-duration-fast) var(--ease-apple);
+        color: var(--text-normal);
+
+        &:hover {
+          background-color: var(--theme-surface-hover);
+          color: #ffffff;
+        }
+
+        &.is-selected {
+          background-color: rgba(var(--color-accent-rgb), 0.16) !important;
+          color: #ffffff !important;
+          border-inline-start: 3px solid var(--color-accent);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .suggestion-highlight {
+          color: var(--color-accent);
+          font-weight: 600;
+        }
+      }
+    }
+
+    /* Keyboard shortcut helper pills */
+    .prompt-instruction {
+      color: var(--text-faint);
+      font-size: 11px;
+
+      kbd {
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--theme-border);
+        border-radius: var(--radius-xs);
+        padding: 2px 5px;
+        color: var(--text-muted);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}

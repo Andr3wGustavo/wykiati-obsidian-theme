@@ -1,0 +1,40 @@
+/* ==========================================================================
+   WYKIATI THEME — TABLES
+   ========================================================================== */
+
+table,
+.table-wrapper {
+  background-color: transparent !important;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--theme-border);
+  overflow: hidden;
+  margin: 1.5em 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.markdown-rendered thead tr {
+  background-color: var(--theme-surface-active);
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+  border-bottom: 1px solid var(--theme-border-subtle);
+  border-right: 1px solid var(--theme-border-subtle);
+  padding: 8px 14px;
+}
+
+.markdown-rendered tbody tr {
+  transition: background-color var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    background-color: var(--theme-surface-hover);
+  }
+
+  &:last-child td {
+    border-bottom: none;
+  }
+}

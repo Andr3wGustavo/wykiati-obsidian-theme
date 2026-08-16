@@ -1,0 +1,19 @@
+/* ==========================================================================
+   WYKIATI THEME — LINKS
+   ========================================================================== */
+
+.cm-link,
+.cm-hmd-internal-link,
+.internal-link,
+.external-link {
+  color: var(--text-accent) !important;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    color: var(--text-accent-hover) !important;
+    border-bottom-color: var(--text-accent-hover);
+    text-shadow: 0 0 8px rgba(var(--color-accent-rgb), 0.3);
+  }
+}

@@ -1,0 +1,37 @@
+/* ==========================================================================
+   WYKIATI THEME — INPUTS & SEARCH CONTROLS
+   ========================================================================== */
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--radius-s) !important;
+  padding: 6px 12px !important;
+  transition: all var(--anim-duration-fast) var(--ease-apple);
+
+  &:hover {
+    border-color: var(--theme-border-hover) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  &:focus {
+    border-color: var(--color-accent) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 0 2px rgba(var(--color-accent-rgb), 0.3) !important;
+    outline: none !important;
+  }
+}
+
+.search-input-container {
+  background-color: transparent !important;
+
+  input {
+    border-radius: var(--radius-m) !important;
+  }
+}

@@ -1,0 +1,30 @@
+/* ==========================================================================
+   WYKIATI THEME — DIALOGS & MODAL CONTAINERS
+   ========================================================================== */
+
+.theme-dark div[role="dialog"],
+div[role="presentation"],
+div[role="dialog"] {
+  background-color: var(--theme-surface-2) !important;
+  backdrop-filter: var(--theme-glass-backdrop);
+  -webkit-backdrop-filter: var(--theme-glass-backdrop);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-floating);
+}
+
+.modal-container {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.modal {
+  background-color: var(--theme-surface-2) !important;
+  backdrop-filter: var(--theme-glass-backdrop);
+  -webkit-backdrop-filter: var(--theme-glass-backdrop);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-floating);
+  padding: 24px;
+}
