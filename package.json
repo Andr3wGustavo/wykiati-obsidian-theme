@@ -1,0 +1,26 @@
+{
+  "name": "wykiati-obsidian-theme",
+  "version": "1.0.0",
+  "description": "Wykiati — Premium OLED Pure Black Glassmorphism theme for Obsidian",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "vite build --mode production",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-theme",
+    "oled",
+    "glassmorphism",
+    "dark-theme",
+    "black",
+    "minimalist"
+  ],
+  "author": "Wykiati",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.80.7",
+    "vite": "^5.4.10"
+  }
+}
