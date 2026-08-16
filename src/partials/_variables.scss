@@ -1,0 +1,199 @@
+/* ==========================================================================
+   WYKIATI THEME — DESIGN SYSTEM & TOKENS
+   Pure OLED Black (#000000) & Translucent Glassmorphism Architecture
+   ========================================================================== */
+
+:root {
+  /* Master Accent & Palettes */
+  --theme-accent: #30d158;
+  --color-accent: var(--theme-accent);
+  --color-accent-rgb: 48, 209, 88;
+  --accent-h: 135;
+  --accent-s: 73%;
+  --accent-l: 50%;
+
+  /* Base Backgrounds (100% OLED Pure Black) */
+  --theme-bg: #000000;
+  --s-bg-transparent: transparent;
+  --s-bg-primary-color: #000000;
+  --s-bg-secondary-color: #08080a;
+
+  /* Surface Elevation Hierarchy */
+  --theme-surface-0: #000000;
+  --theme-surface-1: rgba(14, 14, 16, 0.72);
+  --theme-surface-2: rgba(22, 22, 26, 0.68);
+  --theme-surface-3: rgba(34, 34, 40, 0.60);
+  --theme-surface-glass: rgba(10, 10, 12, 0.65);
+  --theme-surface-active: rgba(255, 255, 255, 0.08);
+  --theme-surface-hover: rgba(255, 255, 255, 0.05);
+
+  /* Glassmorphism & Backdrop Blurs */
+  --theme-glass-blur: 16px;
+  --theme-glass-saturate: 180%;
+  --theme-glass-backdrop: blur(var(--theme-glass-blur)) saturate(var(--theme-glass-saturate));
+  --theme-glass-border-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.10);
+
+  /* Borders & Dividers */
+  --theme-border: rgba(255, 255, 255, 0.08);
+  --theme-border-subtle: rgba(255, 255, 255, 0.04);
+  --theme-border-hover: rgba(255, 255, 255, 0.16);
+  --theme-border-active: rgba(255, 255, 255, 0.22);
+  --theme-border-focus: var(--color-accent);
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --radius-xl: 18px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.65);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.80);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.70), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  --shadow-floating: 0 20px 50px -10px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  /* Modern Semantic Palette */
+  --color-red: rgb(255, 69, 58);
+  --color-red-rgb: 255, 69, 58;
+  --color-orange: rgb(255, 159, 10);
+  --color-orange-rgb: 255, 159, 10;
+  --color-yellow: rgb(255, 214, 10);
+  --color-yellow-rgb: 255, 214, 10;
+  --color-green: rgb(48, 209, 88);
+  --color-green-rgb: 48, 209, 88;
+  --color-cyan: rgb(100, 210, 255);
+  --color-cyan-rgb: 100, 210, 255;
+  --color-blue: rgb(10, 132, 255);
+  --color-blue-rgb: 10, 132, 255;
+  --color-purple: rgb(191, 90, 242);
+  --color-purple-rgb: 191, 90, 242;
+  --color-pink: rgb(255, 55, 95);
+  --color-pink-rgb: 255, 55, 95;
+
+  /* Legacy variable mappings for backward compatibility with Glass-Robo assets */
+  --s-green-primary-color: var(--color-accent);
+  --s-green-secondary-color: #248a3d;
+  --s-hover-bg-color-green: rgba(var(--color-accent-rgb), 0.15);
+  --s-hover-bg-color-gray: rgba(255, 255, 255, 0.08);
+  --s-button-bg-color: rgba(255, 255, 255, 0.06);
+
+  --yellow-faint: #ffe699;
+  --platinum: #ededed;
+  --platinum-faint: #8e8e93;
+
+  --level-1: rgb(255, 69, 58);
+  --level-2: rgb(255, 159, 10);
+  --level-3: rgb(255, 214, 10);
+  --level-4: rgb(48, 209, 88);
+  --level-5: rgb(191, 90, 242);
+  --level-6: rgb(100, 210, 255);
+
+  /* Background noise SVG texture */
+  --s-bg-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  --s-bg-code-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.04' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+
+  /* Typography Stacks */
+  --font-interface-theme: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-text-theme: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
+
+  /* Animation Easings */
+  --anim-speed: 1;
+  --anim-duration-superfast: calc(80ms / var(--anim-speed));
+  --anim-duration-fast: calc(160ms / var(--anim-speed));
+  --anim-duration-moderate: calc(260ms / var(--anim-speed));
+  --anim-duration-slow: calc(400ms / var(--anim-speed));
+  --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.17, 0.89, 0.32, 1.25);
+}
+
+/* ==========================================================================
+   DARK THEME (OLED Pure Black Default)
+   ========================================================================== */
+.theme-dark {
+  --background-primary: var(--theme-bg);
+  --background-primary-alt: var(--theme-surface-1);
+  --background-secondary: var(--theme-surface-1);
+  --background-secondary-alt: var(--theme-surface-2);
+  --interactive-before: transparent;
+  --background-modifier-border: var(--theme-border);
+  --background-modifier-border-focus: var(--theme-border-focus);
+  --background-modifier-hover: var(--theme-surface-hover);
+  --background-modifier-active-hover: var(--theme-surface-active);
+
+  --color-accent: var(--theme-accent);
+  --interactive-accent: var(--color-accent);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: #5ee67f;
+  --text-on-accent: #000000;
+  --interactive-accent-hover: #4cd964;
+
+  --text-normal: #ededed;
+  --text-muted: #9e9e9e;
+  --text-faint: #636366;
+  --text-selection: rgba(var(--color-accent-rgb), 0.28);
+
+  --nav-collapse-icon-color: var(--color-accent);
+  --inline-title-color: #ffffff;
+  --modal-background: var(--theme-surface-2);
+  --caret-color: var(--color-accent);
+  --table-border-color: var(--theme-border);
+
+  /* Scrollbars */
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.12);
+  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.24);
+
+  /* Window frame */
+  --titlebar-background: transparent;
+  --titlebar-background-focused: transparent;
+  --titlebar-border-color: transparent;
+}
+
+/* ==========================================================================
+   LIGHT THEME (Modern Frosted Clean Light fallback)
+   ========================================================================== */
+.theme-light {
+  --theme-bg: #f5f5f7;
+  --s-bg-primary-color: #f5f5f7;
+  --color-accent: #007aff;
+  --color-accent-rgb: 0, 122, 255;
+  --interactive-accent: var(--color-accent);
+  --text-accent: var(--color-accent);
+  --text-on-accent: #ffffff;
+  --interactive-accent-hover: #0062cc;
+
+  --background-primary: var(--theme-bg);
+  --background-primary-alt: rgba(255, 255, 255, 0.85);
+  --background-secondary: rgba(240, 240, 242, 0.80);
+  --background-secondary-alt: rgba(230, 230, 235, 0.85);
+  --background-modifier-border: rgba(0, 0, 0, 0.08);
+
+  --text-normal: #1d1d1f;
+  --text-muted: #6e6e73;
+  --text-faint: #86868b;
+  --text-selection: rgba(0, 122, 255, 0.20);
+  --caret-color: #007aff;
+
+  --theme-surface-1: rgba(255, 255, 255, 0.75);
+  --theme-surface-2: rgba(255, 255, 255, 0.88);
+  --theme-surface-3: rgba(245, 245, 247, 0.95);
+  --theme-border: rgba(0, 0, 0, 0.08);
+  --modal-background: var(--theme-surface-2);
+
+  .workspace-split.mod-root .workspace-tab-header.is-active::before,
+  .workspace-split.mod-root .workspace-tab-header.is-active::after {
+    box-shadow: none !important;
+  }
+}
+
+body {
+  background-color: var(--s-bg-primary-color) !important;
+  color: var(--text-normal);
+  font-family: var(--font-interface-theme);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

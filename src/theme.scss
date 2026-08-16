@@ -1,0 +1,20 @@
+/* 
+ * ==========================================================================
+ *  WYKIATI OBSIDIAN THEME
+ *  Ultra-Premium OLED Pure Black (#000000) & Translucent Glassmorphism
+ *  https://github.com/wykiati/wykiati-obsidian-theme
+ * ==========================================================================
+ *  Licensed under MIT
+ *  Based on architectural foundations by Daniel (@Avesend) & Lorens Osman
+ * ==========================================================================
+ */
+
+@use './partials/style-settings/settings';
+@use './partials/style-settings/settings-modal-style';
+
+@use './partials/_fonts.scss';
+@use './partials/_variables.scss';
+
+@use './partials/general';
+@use './partials/is-pc';
+@use './partials/is-mobile';
