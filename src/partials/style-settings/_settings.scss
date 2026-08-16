@@ -261,14 +261,20 @@ settings:
 # Info & Support
 -
     id: wykiati-support-settings
-    title: About Wykiati
+    title: Support & Links
     type: heading
     level: 1
     collapsed: true
 -
+    id: wykiati-url-coffee
+    title: Buy Me a Coffee
+    description: "[https://www.buymeacoffee.com/wykiati](https://www.buymeacoffee.com/wykiati)"
+    type: info-text
+    markdown: true
+-
     id: wykiati-url-github
     title: GitHub Repository
-    description: "[https://github.com/wykiati/wykiati-obsidian-theme](https://github.com/wykiati/wykiati-obsidian-theme)"
+    description: "[https://github.com/Andr3wGustavo/wykiati-obsidian-theme](https://github.com/Andr3wGustavo/wykiati-obsidian-theme)"
     type: info-text
     markdown: true
 

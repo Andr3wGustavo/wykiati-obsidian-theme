@@ -1,147 +1,141 @@
-<div align="center">
+# Wykiati
 
-# ✨ Wykiati Obsidian Theme
-### Ultra-Premium OLED Pure Black & Translucent Glassmorphism Theme for Obsidian
+> Premium OLED Pure Black (#000000) and Translucent Glassmorphism Theme for Obsidian.
 
-[![Obsidian Theme](https://img.shields.io/badge/Obsidian-Theme-7C3AED.svg?style=for-the-badge&logo=obsidian&logoColor=white)](https://obsidian.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-30D158.svg?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.0.0-0A84FF.svg?style=for-the-badge)](manifest.json)
-[![Platform](https://img.shields.io/badge/Platform-Desktop%20%7C%20Mobile-FF9F0A.svg?style=for-the-badge)](#compatibility)
+[![Obsidian Theme](https://img.shields.io/badge/Obsidian-Theme-7C3AED.svg?style=flat-square&logo=obsidian&logoColor=white)](https://obsidian.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-30D158.svg?style=flat-square)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.0.0-0A84FF.svg?style=flat-square)](manifest.json)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00.svg?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/wykiati)
 
-<br/>
+---
+
+## Overview
+
+Wykiati is a high-contrast, distraction-free theme engineered specifically for OLED displays and modern desktop and mobile workflows. It combines a true pitch-black (`#000000`) foundation with hardware-accelerated glassmorphism, refined typography, and full customization via the Obsidian Style Settings plugin.
 
 ![Wykiati Theme Preview](screenshot.png)
 
-<br/>
+---
 
-**Wykiati** transforms Obsidian into a state-of-the-art, distraction-free knowledge sanctuary. Built from the ground up for **OLED displays** with **100% Pure Black (`#000000`)** foundation, modern **iOS/macOS-inspired glassmorphic translucency**, and vibrant dynamic accents.
+## Architectural Principles
 
-</div>
+### 1. True OLED Black Canvas
+The entire editor, workspace background, and primary views use `#000000`. This eliminates pixel illumination on OLED screens, reduces power consumption on mobile devices, and prevents visual fatigue during extended writing sessions.
+
+### 2. Surface Elevation Hierarchy
+Depth is created through calibrated alpha channels, subtle hairline borders, and hardware-accelerated `backdrop-filter` blurs rather than muddy grey solid backgrounds:
+- **Surface 0 (`--theme-surface-0`)**: `#000000` (Editor canvas, base layout)
+- **Surface 1 (`--theme-surface-1`)**: `rgba(14, 14, 16, 0.72)` (Sidebars, ribbon, status bar)
+- **Surface 2 (`--theme-surface-2`)**: `rgba(22, 22, 26, 0.68)` (Modals, cards, floating palettes)
+- **Surface 3 (`--theme-surface-3`)**: `rgba(34, 34, 40, 0.60)` (Dropdown menus, elevated controls)
+- **Borders (`--theme-border`)**: `rgba(255, 255, 255, 0.08)` hairline definition
+
+### 3. Dynamic Accent System
+The entire UI color scheme is driven by the master CSS variable `--color-accent: var(--theme-accent, #30d158)`. Changing this token dynamically recalculates highlights, active states, focus indicators, and interactive surfaces across the whole application.
 
 ---
 
-## 🌟 Key Highlights
+## Key Features
 
-- 🖤 **100% OLED Pure Black (`#000000`)** — True pitch-black editor canvas for absolute focus, zero eye fatigue, and maximum power efficiency on OLED screens.
-- 🪟 **Frosted Glass Panels** — Translucent sidebars, floating modals, quick switchers, and menus using real hardware-accelerated `backdrop-filter: blur()`.
-- ⚡ **Vibrant Dynamic Accents** — Curated neon palettes (Emerald, Cyber Cyan, Neon Violet, Solar Amber, Crimson Rose, Monochrome, and retro classics like Catppuccin, Dracula, Gruvbox & One Dark).
-- 🔍 **Showpiece Command Palette** — Floating translucent glass modal with sleek input and keyboard shortcut badges.
-- 🏷️ **Apple-Style Properties** — Refined metadata frontmatter cards with modern pill tags.
-- 💬 **Glassmorphism Callouts** — Translucent tinted callouts with glowing side accents and crisp typography.
-- 💻 **Premium Code Blocks** — Ultra-dark glass code surfaces with custom language flair badges, animated copy buttons, and 7 syntax highlighting themes.
-- ☑️ **Custom Checkboxes & Task Glyphs** — Animated iOS-style toggles and extended markdown task bullet icons (`- [!]`, `- [?]`, `- [*]`, `- [i]`, etc.).
-- 📱 **Mobile & Desktop Parity** — Tailored touch targets, single-row mobile toolbar layout, and fluid responsiveness across Windows, macOS, Linux, iOS, and Android.
-- 🎛️ **Full Style Settings Integration** — Customize accents, glass intensity, fonts, headers, and callouts with zero CSS hacking.
+- **Command Palette & Quick Switcher**: Suspended glass modal with 18px rounded corners, borderless search input, keycap badges, and distinctive active item indicator.
+- **Translucent Tabs**: Subtle pill tabs with elevation highlight on active state and integrated circular close button.
+- **Glassmorphism Callouts**: Tinted translucent containers with emissive lateral accent indicators and balanced contrast icons.
+- **Code Blocks**: Dedicated dark surface container (`#0c0c10`) with language flair badges, smooth copy button feedback, and 7 bundled syntax highlight themes.
+- **Metadata Properties**: Frontmatter cards styled with clean borders and tag pills.
+- **Custom Checkboxes & Task Glyphs**: Smooth toggle switches and native support for extended task status indicators (`- [!]`, `- [?]`, `- [*]`, `- [i]`, etc.).
+- **Mobile Optimized**: Single-row compact toolbar option, fluid sheet drawers, and comfortable touch targets across iOS and Android.
 
 ---
 
-## 📸 Interface Showcase
-
-| Feature | Description |
-| :--- | :--- |
-| **OLED Editor** | Pure `#000000` background with high-contrast text (`#ededed`) for comfortable long reading & writing sessions. |
-| **Glass Sidebars** | Translucent file explorer with dedicated file type icons and clean hierarchy guides. |
-| **Pill Tabs** | Sleek active tab indicator with subtle border glow and integrated close buttons. |
-| **Focus Mode** | Subtly dims sidebars and toolbars when typing to keep your attention strictly on your ideas. |
-
----
-
-## 🚀 Installation
+## Installation
 
 ### Method 1: Obsidian Community Themes (Recommended)
 1. In Obsidian, open **Settings** (`Ctrl+,` or `Cmd+,`).
-2. Navigate to **Appearance** → **Themes** → **Manage**.
+2. Navigate to **Appearance** > **Themes** > **Manage**.
 3. Search for `Wykiati`.
 4. Click **Install and apply**.
 
 ### Method 2: Manual Installation
-1. Download `theme.css` and `manifest.json` from the latest [GitHub Release](https://github.com/wykiati/wykiati-obsidian-theme/releases).
-2. Open your Obsidian Vault folder and go to `.obsidian/themes/`.
-3. Create a folder named `Wykiati` and paste `theme.css` and `manifest.json` inside.
-4. In Obsidian, go to **Settings** → **Appearance** → **Theme** and select **Wykiati**.
+1. Download `theme.css` and `manifest.json` from the latest [GitHub Release](https://github.com/Andr3wGustavo/wykiati-obsidian-theme/releases).
+2. Open your Obsidian Vault root directory and navigate to `.obsidian/themes/`.
+3. Create a folder named `Wykiati` and place `theme.css` and `manifest.json` inside.
+4. In Obsidian, go to **Settings** > **Appearance** > **Theme** and select **Wykiati**.
 
 ---
 
-## 🎛️ Customization with Style Settings
+## Style Settings Configuration
 
-Wykiati is deeply integrated with the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) community plugin.
+Wykiati provides comprehensive customization options through the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin:
 
-### Available Options:
-- **Appearance & Colors**:
-  - Color Presets: *Wykiati Emerald (Default)*, *Cyber Cyan*, *Neon Violet*, *Solar Amber*, *Crimson Rose*, *Monochrome Minimal*, *Gruvbox OLED*, *Catppuccin Mocha OLED*, *Dracula OLED*, *One Dark OLED*.
-  - Custom Accent Color Picker (override globally).
-  - Custom Background Color (default: `#000000`).
-- **Glassmorphism & Focus**:
-  - Focus Mode toggle.
-  - Background noise texture toggle.
-  - Note title gradient toggle.
-  - Bold text gradient accent toggle.
-- **Headers & Typography**:
-  - Heading Styles: *Modern Clean*, *Glass Box*, *Lodi Underline*, *Neat Pill*, *Outline*, *Dots*, *Cross*.
-  - Font switcher: Built-in bundled fonts (*Figtree* & *JetBrains Mono*) or Native System Fonts.
-- **Callouts & Code**:
-  - Callout Styles: *Wykiati Modern Glass*, *Floating Title*, *Glow Accent*, *Minimal Outline*.
-  - Syntax Highlighting: *Wykiati Neon*, *Tokyo Night*, *GitHub Dark*, *Catppuccin*, *Dracula*, *One Dark*, *Halcyon*.
-- **Navigation**:
-  - Auto-hide Tab bar, Status bar, or Ribbon until hovered.
-  - Minimal File Tree (hide arrows).
-  - Mobile single-row compact toolbar layout & vertical offset.
-
----
-
-## 🖥️ Compatibility
-
-| Operating System | Obsidian Desktop | Obsidian Mobile | Live Preview | Reading View | Canvas | Graph View |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Windows 10/11** | ✅ | — | ✅ | ✅ | ✅ | ✅ |
-| **macOS** | ✅ | — | ✅ | ✅ | ✅ | ✅ |
-| **Linux** | ✅ | — | ✅ | ✅ | ✅ | ✅ |
-| **iOS / iPadOS** | — | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Android** | — | ✅ | ✅ | ✅ | ✅ | ✅ |
+- **Color Scheme Presets**:
+  - Wykiati Emerald (Default)
+  - Cyber Cyan
+  - Neon Violet
+  - Solar Amber
+  - Crimson Rose
+  - Monochrome Minimal
+  - Gruvbox OLED
+  - Catppuccin Mocha OLED
+  - Dracula OLED
+  - One Dark OLED
+  - Lorens Space
+- **Custom Accent Color**: Full hex/RGB color picker override.
+- **Custom App Background**: Custom background override (default `#000000`).
+- **Focus Mode**: Automatically dims sidebars and toolbars while typing in the editor.
+- **Heading Styles**: Modern Clean, Glass Box, Lodi Underline, Neat Pill, Outline, Dots, Cross.
+- **Callout Styles**: Wykiati Modern Glass, Floating Title, Glow Accent, Minimal Outline.
+- **Code Block Syntax Themes**: Wykiati Neon, Tokyo Night, GitHub Dark, Catppuccin Mocha, Dracula, One Dark, Halcyon.
+- **Auto-Hide Toggles**: Independent hover-to-show options for Tab bar, Status bar, and Left ribbon.
+- **Mobile Toolbar**: Single-row compact layout toggle and vertical pixel offset slider.
 
 ---
 
-## 🛠️ Development & Building from Source
+## Platform Compatibility
 
-To customize or build the theme locally:
+| Platform | Live Preview | Reading View | Canvas | Graph View | Mobile Support |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Windows 10 / 11** | Supported | Supported | Supported | Supported | — |
+| **macOS** | Supported | Supported | Supported | Supported | — |
+| **Linux** | Supported | Supported | Supported | Supported | — |
+| **iOS / iPadOS** | Supported | Supported | Supported | Supported | Supported |
+| **Android** | Supported | Supported | Supported | Supported | Supported |
+
+---
+
+## Development
+
+To build the theme from source:
 
 ```bash
-# Clone the repository
-git clone https://github.com/wykiati/wykiati-obsidian-theme.git
+# Clone repository
+git clone https://github.com/Andr3wGustavo/wykiati-obsidian-theme.git
 cd wykiati-obsidian-theme
 
-# Install build dependencies
+# Install dependencies
 npm install
 
-# Watch mode for live development
+# Start development build with file watching
 npm run dev
 
-# Build production minified theme.css
+# Compile production minified CSS bundle
 npm run build
 ```
 
 ---
 
-## 🗺️ Roadmap
+## Support
 
-- [x] Full OLED `#000000` base architecture
-- [x] Hardware-accelerated glassmorphism design system
-- [x] Style Settings complete integration
-- [x] Mobile single-row toolbar layout
-- [x] Custom task checkboxes & file tree icons
-- [ ] Additional community plugin styling modules (Dataview, Excalidraw, Omnisearch)
-- [ ] Custom Obsidian Canvas card styles
+If you find Wykiati valuable for your daily note-taking and knowledge workflows, you can support ongoing maintenance and feature development:
 
----
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/wykiati)
 
-## 📜 License & Credits
-
-- Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
-- Architectural foundations and SVG icon assets evolved from [Glass Robo](https://github.com/lorens-osman-dev/Glass-Robo) by **Lorens Osman** & **Daniel (@Avesend)**.
-- Fonts: [Figtree](https://github.com/erikdkennedy/figtree) (OFL) by Erik Kennedy, [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) (OFL) by JetBrains.
+- Star the project on [GitHub](https://github.com/Andr3wGustavo/wykiati-obsidian-theme)
+- Report issues and feature requests on the [GitHub Issue Tracker](https://github.com/Andr3wGustavo/wykiati-obsidian-theme/issues)
 
 ---
 
-<div align="center">
-  <b>Designed with ❤️ for high-performance knowledge workers.</b>
-</div>
+## License & Credits
+
+- Licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
+- Base architectural foundations and SVG asset mappings derived from [Glass Robo](https://github.com/lorens-osman-dev/Glass-Robo) by **Lorens Osman** and **Daniel (@Avesend)**.
+- Bundled Fonts: [Figtree](https://github.com/erikdkennedy/figtree) (OFL) by Erik Kennedy, [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) (OFL) by JetBrains.
