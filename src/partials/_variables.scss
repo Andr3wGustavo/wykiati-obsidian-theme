@@ -102,18 +102,33 @@
 }
 
 body {
-  background: var(--s-bg-svg);
-  background-color: var(--s-bg-primary-color);
+  background-color: var(--s-bg-primary-color) !important;
   --font-interface-theme: "Figtree", "azer";
   --font-text-theme: "Figtree", "azer";
   --font-monospace-theme: "JetBrains Mono", "azer";
 
-  /* Animations */
+  /* Optimized Animations */
   --anim-speed: 1;
-  --anim-duration-superfast: calc(75ms / var(--anim-speed));
-  --anim-duration-fast: calc(150ms / var(--anim-speed));
-  --anim-duration-moderate: calc(300ms / var(--anim-speed));
-  --anim-duration-slow: calc(600ms / var(--anim-speed));
+  --anim-duration-superfast: calc(60ms / var(--anim-speed));
+  --anim-duration-fast: calc(120ms / var(--anim-speed));
+  --anim-duration-moderate: calc(200ms / var(--anim-speed));
+  --anim-duration-slow: calc(350ms / var(--anim-speed));
   --anim-in: var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
   --anim-out: var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+/* GPU-Accelerated Fixed Starry Background (Zero Repaint During Scrolling/Typing) */
+body:not(.disable_stars_settings)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: var(--s-bg-svg);
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -9999;
+  will-change: transform;
+  transform: translateZ(0);
 }
