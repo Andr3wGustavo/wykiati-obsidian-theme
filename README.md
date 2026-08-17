@@ -9,6 +9,10 @@
 
 ---
 
+![Wykiati Theme Interface](assets/screenshot.png)
+
+---
+
 ## Overview
 
 Wykiati is a high-contrast, glassmorphism theme engineered for OLED displays and modern desktop and mobile workflows. It combines a solid pitch-black (`#000000`) foundation with subtle starry ambient lighting, hardware-accelerated glass translucency, custom typography (Figtree and JetBrains Mono), and full customization via the Obsidian Style Settings plugin.
