@@ -1,368 +1,337 @@
 /* @settings
 
 name: Wykiati Theme Settings
-id: wykiati-theme-settings
+id: glass-theme-settings
 collapsed: false
 settings:
-
-# General Colors & Background
--
-    id: general-settings
-    title: General & Colors
-    type: heading
-    level: 1
-    collapsed: false
-
--
-    id: glass-background-color-settings
-    title: App background color
-    type: variable-themed-color
-    description: Set app background color (Default: #000000 OLED Pure Black)
-    allowEmpty: true
-    format: hex
-    opacity: false
-    default-dark: '#000000'
-    default-light: '#fafafa'
-
--
-    id: glass-accent-color-settings
-    title: Accent color
-    type: variable-color
-    description: Custom accent color for links, buttons, and active highlights
-    format: hex
-    default: '#a1f98f'
-
--
-    id: glass-border-color-settings
-    title: Border and guide lines color
-    type: variable-color
-    description: Custom color for file tree borders, metadata lines, and dividers
-    format: hex
-    default: '#59a686'
-
--
-    id: glass-graph-node-color-settings
-    title: Graph view node color
-    type: variable-color
-    description: Custom color for graph view nodes
-    format: hex
-    default: '#a1f98f'
-
--
-    id: glass-graph-line-color-settings
-    title: Graph view link lines color
-    type: variable-color
-    description: Custom color for graph view link lines
-    format: hex
-    default: '#59a686'
-
--
-    id: disable_fonts_settings
-    title: Custom bundled fonts
-    description: Disable theme bundled fonts (Figtree / JetBrains Mono)
-    type: class-toggle
-
--
-    id: disable_stars_settings
-    title: Stars in background
-    description: Disable stars and noise texture in background
-    type: class-toggle
-
--
-    id: disable_bold_gradient_settings
-    title: Disable bold text gradient
-    description: Make bold text solid without gradient
-    type: class-toggle
-
--
-    id: hide_navTreeArrow_settings
-    title: Hide nav tree arrow
-    description: Hide navigation tree arrow (>)
-    type: class-toggle
-
--
-    id: one_row_mobile_toolbar_settings
-    title: Mobile toolbar single row layout
-    description: Displays the toolbar in a single row (mobile devices)
-    type: class-toggle
-
--
-    id: one_row_mobile_toolbar_bottom_offset
-    title: Mobile toolbar bottom offset
-    description: Adjust the vertical position of the single-row mobile toolbar (default: 70px)
-    type: variable-number
-    default: 70
-    format: px
-
-# Themes & Color Presets
--
-    id: theme-settings
-    title: Themes & Presets
-    type: heading
-    level: 1
-    collapsed: true
-
--
-    id: themes-setting
-    title: Color schema presets
-    description: Select color schema preset
-    type: class-select
-    allowEmpty: false
-    default: glassRobo
-    options:
     - 
-        label: Wykiati Glass (Default)
-        value: glassRobo
+        id: general-settings
+        title: General & Colors
+        type: heading
+        level: 1
+        collapsed: false
     - 
-        label: Gruvbox
-        value: gruvbox
+        id: glass-background-color-settings
+        title: App background color
+        type: variable-themed-color
+        description: "Set app background color"
+        allowEmpty: true
+        format: hex
+        opacity: false
+        default-dark: '#000000'
+        default-light: '#fafafa'
     - 
-        label: Catppuccin
-        value: catppuccin
+        id: glass-accent-color-settings
+        title: Accent color
+        type: variable-color
+        description: "Custom accent color for links, buttons, and active highlights"
+        format: hex
+        default: '#a1f98f'
     - 
-        label: Lorens
-        value: lorens
+        id: glass-border-color-settings
+        title: Border and guide lines color
+        type: variable-color
+        description: "Custom color for file tree borders, metadata lines, and dividers"
+        format: hex
+        default: '#59a686'
     - 
-        label: Dracula
-        value: dracula
+        id: glass-graph-node-color-settings
+        title: Graph view node color
+        type: variable-color
+        description: "Custom color for graph view nodes"
+        format: hex
+        default: '#a1f98f'
     - 
-        label: One Dark
-        value: oneDark 
-
-# Headers
--
-    id: headers-settings
-    title: Headers
-    type: heading
-    level: 1
-    collapsed: true
-
--
-    id: headers-settin
-    title: Header styling
-    description: Select headers style
-    type: class-select
-    allowEmpty: false
-    default: glass-robo-style-headers
-    options:
+        id: glass-graph-line-color-settings
+        title: Graph view link lines color
+        type: variable-color
+        description: "Custom color for graph view link lines"
+        format: hex
+        default: '#59a686'
     - 
-        label: No Style
-        value: no-style-headers
+        id: disable_fonts_settings
+        title: Custom bundled fonts
+        description: "Disable theme bundled fonts (Figtree / JetBrains Mono)"
+        type: class-toggle
     - 
-        label: Glass Robo
-        value: glass-robo-style-headers
+        id: disable_stars_settings
+        title: Stars in background
+        description: "Disable stars and noise texture in background"
+        type: class-toggle
     - 
-        label: Lodi
-        value: lodi-style-headers
+        id: disable_bold_gradient_settings
+        title: Disable bold text gradient
+        description: "Make bold text solid without gradient"
+        type: class-toggle
     - 
-        label: Cross
-        value: cross-style-headers
+        id: hide_navTreeArrow_settings
+        title: Hide nav tree arrow
+        description: "Hide navigation tree arrow"
+        type: class-toggle
     - 
-        label: Voidraizer
-        value: voidraizer-style-headers
+        id: one_row_mobile_toolbar_settings
+        title: Mobile toolbar single row layout
+        description: "Displays the toolbar in a single row (mobile devices)"
+        type: class-toggle
     - 
-        label: Outline
-        value: outline-style-headers
+        id: one_row_mobile_toolbar_bottom_offset
+        title: Mobile toolbar bottom offset
+        description: "Adjust the vertical position of the single-row mobile toolbar (default: 70px)"
+        type: variable-number
+        default: 70
+        format: px
     - 
-        label: Dots
-        value: dots-style-headers
+        id: theme-settings
+        title: Themes & Presets
+        type: heading
+        level: 1
+        collapsed: true
     - 
-        label: Neat
-        value: neat-style-headers
-
--
-    id: headers-color-settin
-    title: Header colors
-    description: Select color schema for headers
-    type: class-select
-    allowEmpty: false
-    default: glass-robo-color-headers
-    options:
+        id: themes-setting
+        title: Color schema presets
+        description: "Select color schema preset"
+        type: class-select
+        allowEmpty: false
+        default: glassRobo
+        options:
+            - 
+                label: Wykiati Glass (Default)
+                value: glassRobo
+            - 
+                label: Gruvbox
+                value: gruvbox
+            - 
+                label: Catppuccin
+                value: catppuccin
+            - 
+                label: Lorens
+                value: lorens
+            - 
+                label: Dracula
+                value: dracula
+            - 
+                label: One Dark
+                value: oneDark
     - 
-        label: No Color
-        value: no-color-headers
+        id: headers-settings
+        title: Headers
+        type: heading
+        level: 1
+        collapsed: true
     - 
-        label: Glass Robo
-        value: glass-robo-color-headers
+        id: headers-settin
+        title: Header styling
+        description: "Select headers style"
+        type: class-select
+        allowEmpty: false
+        default: glass-robo-style-headers
+        options:
+            - 
+                label: No Style
+                value: no-style-headers
+            - 
+                label: Glass Robo
+                value: glass-robo-style-headers
+            - 
+                label: Lodi
+                value: lodi-style-headers
+            - 
+                label: Cross
+                value: cross-style-headers
+            - 
+                label: Voidraizer
+                value: voidraizer-style-headers
+            - 
+                label: Outline
+                value: outline-style-headers
+            - 
+                label: Dots
+                value: dots-style-headers
+            - 
+                label: Neat
+                value: neat-style-headers
     - 
-        label: Lorens 
-        value: lorens-color-headers
-
-# Callouts
--
-    id: callouts-settings
-    title: Callouts
-    type: heading
-    level: 1
-    collapsed: true
-
--   
-    id: callouts-settin
-    title: Callout styling
-    type: class-select
-    allowEmpty: false
-    default: 'glass-robo-callouts'
-    options:
-    -
-        label: Obsidian default
-        value: obsidian-callouts
-    -
-        label: Glass Robo
-        value: glass-robo-callouts
-    -
-        label: Lorens
-        value: lorens-callouts
-    -
-        label: Glow
-        value: glow-callouts
-    -
-        label: Idlib
-        value: idlib-callouts
-    -
-        label: Draa
-        value: draa-callouts
-    -
-        label: Raka
-        value: raka-callouts
-    -
-        label: Ladak
-        value: ladak-callouts
-    -
-        label: Sham
-        value: sham-callouts
-    -
-        label: Hama
-        value: hama-callouts
-    -
-        label: Gaza
-        value: gaza-callouts
-    -
-        label: Halab
-        value: halab-callouts
-    -
-        label: Dzor
-        value: dzor-callouts
-    -
-        label: Hasaka
-        value: hasaka-callouts
-    -
-        label: Tadmor
-        value: tadmor-callouts
-    -
-        label: Homs
-        value: homs-callouts
-    -
-        label: Gummy
-        value: gummy-callouts
-    -
-        label: Wall
-        value: wall-callouts
-    -
-        label: Loli
-        value: loli-callouts
-    -
-        label: Swida
-        value: swida-callouts
-    -
-        label: Tartus
-        value: tartus-callouts
-
--
-    id: callout_center_settings
-    title: Centering callouts titles
-    description: Centering title headers on callouts
-    type: class-toggle
-
-# Code Blocks
--
-    id: codeBlocks-settings
-    title: Code blocks
-    type: heading
-    level: 1
-    collapsed: true
-
--
-    id: syntax-highlight-theme-dark
-    title: Code blocks syntax highlighting
-    description: Select syntax highlighting for dark theme
-    type: class-select
-    allowEmpty: false
-    default: glassRoboCode
-    options:
+        id: headers-color-settin
+        title: Header colors
+        description: "Select color schema for headers"
+        type: class-select
+        allowEmpty: false
+        default: glass-robo-color-headers
+        options:
+            - 
+                label: No Color
+                value: no-color-headers
+            - 
+                label: Glass Robo
+                value: glass-robo-color-headers
+            - 
+                label: Lorens 
+                value: lorens-color-headers
     - 
-        label: Glass Robo
-        value: glassRoboCode
+        id: callouts-settings
+        title: Callouts
+        type: heading
+        level: 1
+        collapsed: true
     - 
-        label: Dracula
-        value: dracula
+        id: callouts-settin
+        title: Callout styling
+        type: class-select
+        allowEmpty: false
+        default: glass-robo-callouts
+        options:
+            -
+                label: Obsidian default
+                value: obsidian-callouts
+            -
+                label: Glass Robo
+                value: glass-robo-callouts
+            -
+                label: Lorens
+                value: lorens-callouts
+            -
+                label: Glow
+                value: glow-callouts
+            -
+                label: Idlib
+                value: idlib-callouts
+            -
+                label: Draa
+                value: draa-callouts
+            -
+                label: Raka
+                value: raka-callouts
+            -
+                label: Ladak
+                value: ladak-callouts
+            -
+                label: Sham
+                value: sham-callouts
+            -
+                label: Hama
+                value: hama-callouts
+            -
+                label: Gaza
+                value: gaza-callouts
+            -
+                label: Halab
+                value: halab-callouts
+            -
+                label: Dzor
+                value: dzor-callouts
+            -
+                label: Hasaka
+                value: hasaka-callouts
+            -
+                label: Tadmor
+                value: tadmor-callouts
+            -
+                label: Homs
+                value: homs-callouts
+            -
+                label: Gummy
+                value: gummy-callouts
+            -
+                label: Wall
+                value: wall-callouts
+            -
+                label: Loli
+                value: loli-callouts
+            -
+                label: Swida
+                value: swida-callouts
+            -
+                label: Tartus
+                value: tartus-callouts
     - 
-        label: One Dark
-        value: one-dark-dark
+        id: callout_center_settings
+        title: Centering callouts titles
+        description: "Centering title headers on callouts"
+        type: class-toggle
     - 
-        label: Catppuccin Frappe
-        value: catppuccin-frappe-for-dark
+        id: codeBlocks-settings
+        title: Code blocks
+        type: heading
+        level: 1
+        collapsed: true
     - 
-        label: Catppuccin Macchiato
-        value: catppuccin-macchiato
+        id: syntax-highlight-theme-dark
+        title: Code blocks syntax highlighting
+        description: "Select syntax highlighting for dark theme"
+        type: class-select
+        allowEmpty: false
+        default: glassRoboCode
+        options:
+            - 
+                label: Glass Robo
+                value: glassRoboCode
+            - 
+                label: Dracula
+                value: dracula
+            - 
+                label: One Dark
+                value: one-dark-dark
+            - 
+                label: Catppuccin Frappe
+                value: catppuccin-frappe-for-dark
+            - 
+                label: Catppuccin Macchiato
+                value: catppuccin-macchiato
+            - 
+                label: Catppuccin Mocha
+                value: catppuccin-mocha
+            - 
+                label: Halcyon
+                value: halcyon
+            - 
+                label: GitHub Dark
+                value: github-dark
+            - 
+                label: Tokyo Night
+                value: tokyo-night
     - 
-        label: Catppuccin Mocha
-        value: catppuccin-mocha
+        id: autohide-settings
+        title: Auto hide
+        type: heading
+        level: 1
+        collapsed: true
     - 
-        label: Halcyon
-        value: halcyon
+        id: tab-autohide
+        title: Auto hide tab bar
+        type: class-toggle
     - 
-        label: GitHub Dark
-        value: github-dark
+        id: status-bar-autohide
+        title: Auto hide bottom status bar
+        type: class-toggle
     - 
-        label: Tokyo Night
-        value: tokyo-night
-
-# Auto Hide
-- 
-    id: autohide-settings
-    title: Auto hide
-    type: heading
-    level: 1
-    collapsed: true
-- 
-    id: tab-autohide
-    title: Auto hide tab bar
-    type: class-toggle
-- 
-    id: status-bar-autohide
-    title: Auto hide bottom status bar
-    type: class-toggle
-- 
-    id: Ribbon-autohide
-    title: Auto hide left ribbon menu
-    type: class-toggle
-
-# Support & Links
--
-    id: glass-support-settings
-    title: Support & Donate
-    description: Support the ongoing development of Wykiati
-    type: heading
-    level: 1
-    collapsed: true
--
-    id: glass-url-donate
-    title: Buy Me a Coffee
-    description: "[https://www.buymeacoffee.com/wykiati](https://www.buymeacoffee.com/wykiati)"
-    type: info-text
-    markdown: true
--
-    id: glass-url-star-repo
-    title: GitHub Repository
-    description: "[https://github.com/Andr3wGustavo/wykiati-obsidian-theme](https://github.com/Andr3wGustavo/wykiati-obsidian-theme)"
-    type: info-text
-    markdown: true
--
-    id: glass-url-submit-issue
-    title: Submit an Issue on GitHub
-    description: "[https://github.com/Andr3wGustavo/wykiati-obsidian-theme/issues](https://github.com/Andr3wGustavo/wykiati-obsidian-theme/issues)"
-    type: info-text
-    markdown: true
+        id: Ribbon-autohide
+        title: Auto hide left ribbon menu
+        type: class-toggle
+    - 
+        id: glass-support-settings
+        title: Support & Donate
+        description: "Support the ongoing development of Wykiati"
+        type: heading
+        level: 1
+        collapsed: true
+    - 
+        id: glass-url-donate
+        title: Buy Me a Coffee
+        description: "[https://www.buymeacoffee.com/wykiati](https://www.buymeacoffee.com/wykiati)"
+        type: info-text
+        markdown: true
+    - 
+        id: glass-url-star-repo
+        title: GitHub Repository
+        description: "[https://github.com/Andr3wGustavo/wykiati-obsidian-theme](https://github.com/Andr3wGustavo/wykiati-obsidian-theme)"
+        type: info-text
+        markdown: true
+    - 
+        id: glass-url-submit-issue
+        title: Submit an Issue on GitHub
+        description: "[https://github.com/Andr3wGustavo/wykiati-obsidian-theme/issues](https://github.com/Andr3wGustavo/wykiati-obsidian-theme/issues)"
+        type: info-text
+        markdown: true
 
 */
 
