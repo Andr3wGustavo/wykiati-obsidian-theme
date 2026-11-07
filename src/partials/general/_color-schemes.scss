@@ -1,5 +1,9 @@
 /* ==========================================================================
    WYKIATI THEME — COLOR SCHEMES & PALETTES
+   --------------------------------------------------------------------------
+   Presets only provide fallbacks. The background is resolved in one place
+   (`--s-bg-primary-color` in _variables.scss), and user choices from
+   Style Settings (accent, text, background) always win over the preset.
    ========================================================================== */
 
 body {
@@ -18,85 +22,76 @@ body {
   --callout-question: var(--color-orange-rgb, 255, 159, 10);
   --callout-warning: var(--color-orange-rgb, 255, 159, 10);
   --callout-example: var(--color-purple-rgb, 191, 90, 242);
+
+  // Hover tint follows whatever accent is active (preset or user-picked)
+  --s-hover-bg-color-green: color-mix(in srgb, var(--color-accent) 16%, transparent);
 }
 
 /* Default / Wykiati Emerald */
 body.glassRobo,
 body.wykiatiEmerald {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #30d158;
-  --color-accent: #30d158;
+  --color-accent: var(--glass-accent-color-settings, #30d158);
   --color-accent-rgb: 48, 209, 88;
-  --text-normal: #ededed;
-  --s-hover-bg-color-green: rgba(48, 209, 88, 0.16);
+  --text-normal: var(--glass-text-color-settings, #ededed);
 }
 
 /* Neon Cyan / Cyberpunk */
 body.wykiatiCyan {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #64d2ff;
-  --color-accent: #64d2ff;
+  --color-accent: var(--glass-accent-color-settings, #64d2ff);
   --color-accent-rgb: 100, 210, 255;
-  --text-normal: #f0f8ff;
-  --s-hover-bg-color-green: rgba(100, 210, 255, 0.16);
+  --text-normal: var(--glass-text-color-settings, #f0f8ff);
 }
 
 /* Neon Violet / Amethyst */
 body.wykiatiViolet {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #bf5af2;
-  --color-accent: #bf5af2;
+  --color-accent: var(--glass-accent-color-settings, #bf5af2);
   --color-accent-rgb: 191, 90, 242;
-  --text-normal: #fdf8ff;
-  --s-hover-bg-color-green: rgba(191, 90, 242, 0.16);
+  --text-normal: var(--glass-text-color-settings, #fdf8ff);
 }
 
 /* Solar Amber / Gold */
 body.wykiatiAmber {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #ffd60a;
-  --color-accent: #ffd60a;
+  --color-accent: var(--glass-accent-color-settings, #ffd60a);
   --color-accent-rgb: 255, 214, 10;
-  --text-normal: #fffdf5;
-  --s-hover-bg-color-green: rgba(255, 214, 10, 0.16);
+  --text-normal: var(--glass-text-color-settings, #fffdf5);
 }
 
 /* Crimson Rose */
 body.wykiatiRose {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #ff375f;
-  --color-accent: #ff375f;
+  --color-accent: var(--glass-accent-color-settings, #ff375f);
   --color-accent-rgb: 255, 55, 95;
-  --text-normal: #fff5f7;
-  --s-hover-bg-color-green: rgba(255, 55, 95, 0.16);
+  --text-normal: var(--glass-text-color-settings, #fff5f7);
 }
 
 /* Monochrome Minimal */
 body.wykiatiMono {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #ffffff;
-  --color-accent: #ffffff;
+  --color-accent: var(--glass-accent-color-settings, #ffffff);
   --color-accent-rgb: 255, 255, 255;
-  --text-normal: #ffffff;
+  --text-normal: var(--glass-text-color-settings, #ffffff);
   --text-muted: #a0a0a5;
-  --s-hover-bg-color-green: rgba(255, 255, 255, 0.14);
+  --s-hover-bg-color-green: color-mix(in srgb, var(--color-accent) 14%, transparent);
 }
 
 /* Gruvbox OLED */
 body.gruvbox {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #fabd2f;
-  --color-accent: #fabd2f;
+  --color-accent: var(--glass-accent-color-settings, #fabd2f);
   --color-accent-rgb: 250, 189, 47;
-  --text-normal: #ebdbb2;
-  --s-hover-bg-color-green: rgba(250, 189, 47, 0.15);
+  --text-normal: var(--glass-text-color-settings, #ebdbb2);
+  --s-hover-bg-color-green: color-mix(in srgb, var(--color-accent) 15%, transparent);
   --color-red-rgb: 204, 36, 29;
   --color-green-rgb: 152, 151, 26;
   --color-orange-rgb: 215, 153, 33;
@@ -108,12 +103,11 @@ body.gruvbox {
 /* Catppuccin Mocha OLED */
 body.catppuccin {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #89b4fa;
-  --color-accent: #89b4fa;
+  --color-accent: var(--glass-accent-color-settings, #89b4fa);
   --color-accent-rgb: 137, 180, 250;
-  --text-normal: #cdd6f4;
-  --s-hover-bg-color-green: rgba(137, 180, 250, 0.15);
+  --text-normal: var(--glass-text-color-settings, #cdd6f4);
+  --s-hover-bg-color-green: color-mix(in srgb, var(--color-accent) 15%, transparent);
   --color-red-rgb: 243, 139, 168;
   --color-orange-rgb: 250, 179, 135;
   --color-green-rgb: 166, 227, 161;
@@ -125,12 +119,11 @@ body.catppuccin {
 /* Dracula OLED */
 body.dracula {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #bd93f9;
-  --color-accent: #bd93f9;
+  --color-accent: var(--glass-accent-color-settings, #bd93f9);
   --color-accent-rgb: 189, 147, 249;
-  --text-normal: #f8f8f2;
-  --s-hover-bg-color-green: rgba(189, 147, 249, 0.18);
+  --text-normal: var(--glass-text-color-settings, #f8f8f2);
+  --s-hover-bg-color-green: color-mix(in srgb, var(--color-accent) 18%, transparent);
   --color-red-rgb: 255, 85, 85;
   --color-orange-rgb: 255, 184, 108;
   --color-green-rgb: 80, 250, 123;
@@ -142,12 +135,10 @@ body.dracula {
 /* One Dark OLED */
 body.oneDark {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #61afef;
-  --color-accent: #61afef;
+  --color-accent: var(--glass-accent-color-settings, #61afef);
   --color-accent-rgb: 97, 175, 239;
-  --text-normal: #abb2bf;
-  --s-hover-bg-color-green: rgba(97, 175, 239, 0.16);
+  --text-normal: var(--glass-text-color-settings, #abb2bf);
   --color-red-rgb: 224, 108, 117;
   --color-orange-rgb: 209, 154, 102;
   --color-green-rgb: 152, 195, 121;
@@ -159,12 +150,11 @@ body.oneDark {
 /* Lorens / Deep Space OLED */
 body.lorens {
   --theme-bg: #000000;
-  --s-bg-primary-color: #000000;
   --theme-accent: #a1f98f;
-  --color-accent: #a1f98f;
+  --color-accent: var(--glass-accent-color-settings, #a1f98f);
   --color-accent-rgb: 161, 249, 143;
-  --text-normal: #f8f8f2;
-  --s-hover-bg-color-green: rgba(161, 249, 143, 0.18);
+  --text-normal: var(--glass-text-color-settings, #f8f8f2);
+  --s-hover-bg-color-green: color-mix(in srgb, var(--color-accent) 18%, transparent);
   --color-orange-rgb: 253, 252, 179;
   --color-blue-rgb: 118, 133, 245;
   --color-red-rgb: 254, 97, 62;

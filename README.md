@@ -29,16 +29,25 @@ Translucent surfaces, sidebars, modals, and navigation panels utilize hardware-a
 
 ### 3. Interactive RGB Color Customization
 Through Style Settings, users can customize the exact hex/RGB color of:
-- App Background Color
-- Primary Accent Color
+- App Background Color (applied consistently to menus, modals, canvas and mobile surfaces, in both dark and light mode)
+- Primary Accent Color (hover highlights follow the accent automatically)
 - Border and Guide Line Colors
 - Graph View Nodes and Link Lines
+- Starry Background Tint
+- Normal Text Color (dark mode)
+
+### 4. Background Modes
+- **Hue mode (color wheel)**: Hue (0–360°), Saturation and Lightness sliders. Spin the hue to cycle through every color; lightness is capped at 30% so the theme stays dark and readable.
+- **Gradient**: blends the background (or Hue mode color) into a second color at any angle.
+
+### 5. Color Presets
+Wykiati Glass (default), Gruvbox, Catppuccin, Lorens, Dracula, One Dark, Neon Cyan, Neon Violet, Solar Amber, Crimson Rose and Monochrome. Your custom accent, background and text colors always take priority over the preset.
 
 ---
 
 ## Key Features
 
-- **Starry Background Illumination**: Subtle background noise with specular lighting filter.
+- **Starry Background Illumination**: Subtle background noise with specular lighting filter, in any color you choose.
 - **Glassmorphism Callouts**: Multiple visual styles with lateral accent indicators.
 - **Code Blocks**: Dedicated dark surface container with language flair badges and 9 bundled syntax themes.
 - **Extended Task Checkboxes**: Native support for custom task status glyphs (`- [!]`, `- [?]`, `- [*]`, `- [i]`, etc.).

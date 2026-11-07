@@ -44,7 +44,7 @@
 
   --color-accent: var(--s-green-primary-color);
 
-  --text-normal: var(--platinum);
+  --text-normal: var(--glass-text-color-settings, var(--platinum));
   --text-faint: var(--platinum-faint);
 
   --interactive-accent: var(--s-green-primary-color); //loading bar color
@@ -63,10 +63,9 @@
   --inline-title-color: white;
 
   --background-modifier-border-focus: var(--s-green-primary-color); // focused inputs border color
-  --modal-background: var(--s-bg-primary-color);
   --caret-color: #ff0000;
 
-  --modal-background: var(--glass-background-color-settings, var(--s-bg-primary-color)) !important;
+  --modal-background: var(--s-bg-primary-color) !important;
   --table-border-color: var(--s-border-color);
 
   // Graph view overrides
@@ -77,7 +76,6 @@
 .theme-light {
   --s-green-primary-color: var(--glass-accent-color-settings, rgb(218, 1, 77));
   --background-primary: var(--s-bg-transparent);
-  --s-bg-primary-color: rgb(246, 246, 246) !important;
   --color-accent: var(--s-green-primary-color);
   --interactive-accent: var(--s-green-primary-color);
   --text-on-accent: var(--s-bg-primary-color);
@@ -87,7 +85,6 @@
   --text-muted: var(--text-normal);
   --background-modifier-border: var(--s-bg-transparent);
   --platinum: #777373;
-  --glass-background-color-settings: rgb(246, 246, 246) !important;
   --level-1: rgb(218, 1, 77);
   --level-6: rgb(106, 57, 205);
   --level-2: rgb(180, 218, 0);
@@ -99,6 +96,31 @@
   .workspace-split.mod-root .workspace-tab-header.is-active::after {
     box-shadow: none !important;
   }
+}
+
+/* ==========================================================================
+   BACKGROUND — single source of truth
+   Every surface that needs the app background reads `--s-bg-primary-color`.
+   Priority: HSL mode > Style Settings color picker > preset/theme default.
+   ========================================================================== */
+body.theme-dark {
+  --s-bg-primary-color: var(--glass-background-color-settings, var(--theme-bg, #000000));
+}
+
+body.theme-light {
+  --s-bg-primary-color: var(--glass-background-color-settings, #f6f6f6);
+}
+
+// HSL mode: hue / saturation / lightness sliders ("color wheel" feel, CSS only)
+body.glass-bg-hsl-mode {
+  --s-bg-primary-color: hsl(var(--glass-bg-hue, 220) var(--glass-bg-saturation, 40%) var(--glass-bg-lightness, 6%));
+}
+
+// Gradient mode: start color is the resolved background, end color + angle are configurable
+body.glass-bg-gradient-mode {
+  background-image: linear-gradient(var(--glass-bg-gradient-angle, 135deg),
+      var(--s-bg-primary-color),
+      var(--glass-bg-gradient-end, #0b1a2e)) !important;
 }
 
 body {
@@ -125,8 +147,12 @@ body:not(.disable_stars_settings)::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: var(--s-bg-svg);
-  background-repeat: repeat;
+  // The star texture is used as a mask so its color can be customized
+  background-color: var(--glass-star-color-settings, #beb7df);
+  -webkit-mask-image: var(--s-bg-svg);
+  mask-image: var(--s-bg-svg);
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
   pointer-events: none;
   z-index: -9999;
   will-change: transform;

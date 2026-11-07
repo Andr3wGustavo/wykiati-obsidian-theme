@@ -20,7 +20,89 @@ settings:
         opacity: false
         default-dark: '#000000'
         default-light: '#fafafa'
-    - 
+    -
+        id: glass-bg-hsl-heading
+        title: Background — Hue mode (color wheel)
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: glass-bg-hsl-mode
+        title: Use Hue / Saturation / Lightness background
+        description: "When enabled, the sliders below replace the background color picker"
+        type: class-toggle
+    -
+        id: glass-bg-hue
+        title: Hue
+        description: "0 = red, 120 = green, 220 = blue, 280 = purple, 360 = red"
+        type: variable-number-slider
+        default: 220
+        min: 0
+        max: 360
+        step: 1
+    -
+        id: glass-bg-saturation
+        title: Saturation
+        type: variable-number-slider
+        default: 40
+        min: 0
+        max: 100
+        step: 1
+        format: '%'
+    -
+        id: glass-bg-lightness
+        title: Lightness
+        description: "Kept low so the theme stays dark and readable (0 = pure black)"
+        type: variable-number-slider
+        default: 6
+        min: 0
+        max: 30
+        step: 1
+        format: '%'
+    -
+        id: glass-bg-gradient-heading
+        title: Background — Gradient
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: glass-bg-gradient-mode
+        title: Enable background gradient
+        description: "Blends the background color (or Hue mode color) into the end color below"
+        type: class-toggle
+    -
+        id: glass-bg-gradient-end
+        title: Gradient end color
+        type: variable-color
+        format: hex
+        opacity: false
+        default: '#0b1a2e'
+    -
+        id: glass-bg-gradient-angle
+        title: Gradient angle
+        type: variable-number-slider
+        default: 135
+        min: 0
+        max: 360
+        step: 5
+        format: deg
+    -
+        id: glass-star-color-settings
+        title: Stars color
+        description: "Tint of the starry background texture"
+        type: variable-color
+        format: hex
+        opacity: false
+        default: '#beb7df'
+    -
+        id: glass-text-color-settings
+        title: Text color (dark mode)
+        description: "Override the normal text color — useful with lighter backgrounds. Reset to use the preset color"
+        type: variable-color
+        format: hex
+        opacity: false
+        default: '#c7c7c7'
+    -
         id: glass-accent-color-settings
         title: Accent color
         type: variable-color
@@ -112,7 +194,22 @@ settings:
             - 
                 label: One Dark
                 value: oneDark
-    - 
+            -
+                label: Neon Cyan
+                value: wykiatiCyan
+            -
+                label: Neon Violet
+                value: wykiatiViolet
+            -
+                label: Solar Amber
+                value: wykiatiAmber
+            -
+                label: Crimson Rose
+                value: wykiatiRose
+            -
+                label: Monochrome
+                value: wykiatiMono
+    -
         id: headers-settings
         title: Headers
         type: heading
@@ -367,11 +464,8 @@ body.hide_navTreeArrow_settings {
     }
 }
 
-// Background color override
-body.theme-dark {
-    background-color: var(--glass-background-color-settings, var(--s-bg-primary-color)) !important;
-}
-
+// Background color is resolved in _variables.scss (--s-bg-primary-color)
+body.theme-dark,
 body.theme-light {
-    background-color: var(--glass-background-color-settings, #fafafa) !important;
+    background-color: var(--s-bg-primary-color) !important;
 }
